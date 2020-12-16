@@ -1,4 +1,4 @@
-<mvcc:View
+<mvc:View
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mve">
     <Text text="Hello World"/>
