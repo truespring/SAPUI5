@@ -6,7 +6,7 @@ sap.ui.define([
 ], function (Control, RatingIndicator, Label, Button) {
     "use strict";
     return Control.extend("sap.ui.demo.walkthrough.control.ProductRating", {
-        matadata : {
+        metadata : {
             properties : {
                 value: {type : "float", defaultValue : 0}
             },
@@ -25,14 +25,14 @@ sap.ui.define([
         },
         init : function() {
             this.setAggregation("_rating", new RatingIndicator({
-                value: this.gatValue(),
+                value: this.getValue(),
                 iconSize: "2rem",
                 visualMode: "Half",
                 liveChange: this._onRate.bind(this)
             }));
             this.setAggregation("_label", new Label({
                 text: "{i18n>productRatingLabelInitial}"
-            }).addStyleClass("sapUiSamllMargin"));
+            }).addStyleClass("sapUiSmallMargin"));
             this.setAggregation("_button", new Button({
                 text: "{i18n>productRatingButton}",
                 press: this._onSubmit.bind(this)
@@ -50,7 +50,7 @@ sap.ui.define([
             this.setValue(0);
             this.getAggregation("_label").setDesign("Standard");
             this.getAggregation("_rating").setEnabled(true);
-            this.getAggregation("_label").setText(oResourceBundle.getText("productRaingLabelInitial"));
+            this.getAggregation("_label").setText(oResourceBundle.getText("productRatingLabelInitial"));
             this.getAggregation("_button").setEnabled(true);
         },
 
