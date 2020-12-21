@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPUI5 Walkthrough</title>
+    <script
+        id="sap-ui-bootstrap"
+        src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_belize"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true"
+        data-sap-ui-onInit="module:sap/ui/core/ComponentSupport"
+        data-sap-ui-resourceroots='{
+            "sap.ui.demo.walkthrough": "./"
+        }'>
+        /*
+            SAPUI5 프레임워크를 사용하기위해 로컬웹서버와 코어 모듈을 초기화하는 환경설정
+            ui-libs - UI 라이브러리인 sap.m
+            비동기식으로 실행되도록 "부트스트래핑"프로세스를 구성함
+            즉, 수행상의 이유로 백그라운드에서 동시에 SAPUI5 리소스를 로드할 수 있음
+            처음에 선언하는 방식으로 로드될 모듈을 정의함 -> 이를 통해 HTML파일에서 직접 실행 가능한 Javascript 코드를 방지함 -> 앱의 보안을 강화
+        */
+    </script>
+</head>
+<body class="sapUiBody" id="content">
+    <div data-sap-ui-component data-name="sap.ui.demo.walkthrough" data-id="container" data-settings='{"id" : "walkthrough"}'></div>
+</body>
+</html>

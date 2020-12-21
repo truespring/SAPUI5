@@ -18,3 +18,4 @@
     * rootView - component
     * dependencies - UI 라이브러리 선언
     * models - model 정의
+    * resources - css 경로
