@@ -3,10 +3,11 @@ sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/model/json/JSONModel",
 ], function (Controller, UIComponent, JSONModel) {
-    "ues strict";
-
-    return Controller.extend("my.application.controller.BaseController", {
-        	/**
+    "use strict";
+    
+    return Controller.extend("my.application.controller.BaseController", 
+    {
+    	/**
 		 * Convenience method for getting the manifest.json file entry value.
 		 * @public
 		 * @returns {string} manifest.json file entry value
@@ -71,8 +72,7 @@ sap.ui.define([
                         var proxyFunc = jQuery.proxy(that, oParam.error);
                         proxyFunc();
                     }
-                });
-            }
+            });
         }
-    )
-})
+    });
+});

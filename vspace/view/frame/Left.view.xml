@@ -10,28 +10,21 @@
         <l:content>
             <VBox>
                 <!-- <Image              class="mvpLogoType"     src="./images/Logo.png"/> -->
-                <l:VerticalLayout   class="menuListBox">
+                <l:VerticalLayout   class="">
                 <!-- Quick Start -->
-                    <VBox class="responsiveMenu">
+                    <VBox class="">
                         <l:HorizontalLayout>
                             <!-- <Image  src="./images/Ico_List.png"/> -->
-                            <Text   text="Quick Start"    class="subTitle"/>
+                            <Text   text="Contests List"    class=""/>
                         </l:HorizontalLayout>
-                        <Button     id="contents1"           text="Air Pollution"           press=".onNavToContent1"          class="btnLeftList"/>
-                   <!-- <Button     id="contents2"           text="Case Studies 2"          press=".onNavToContent2"          class="btnLeftList"/> -->
-                   <!-- <Button     id="contents3"           text="Bar SampleChart"         press=".onNavToContent3"          class="btnLeftList"/> -->
-                   <!-- <Button     id="contents4"           text="Bullet SampleChart"      press=".onNavToContent4"          class="btnLeftList"/> -->
-                        <Button     id="sensorSparkRT"       text="Sensor Spark Real-time"  press=".onNavToSensorSparkRT"     class="btnLeftList"/>
-                        <Button     id="sparkController"     text="Spark Controller"        press=".onNavToSparkController"   class="btnLeftList"/>
-                        <Button     id="cpuInfo"             text="Cpu Info"                press=".onNavToCpuInfo"           class="btnLeftList"/>
-                        <Button     id="sapui5"              text="SAPUI5"                  press=".onNavToSapUI5"            class="btnLeftList"/>
-                        <Button     id="python_ml"           text="Python Machine Learning" press=".onNavToPythonML"          class="btnLeftList"/>
-                        <Button     id="awx"                 text="AWX(admin/password)"     press=".onNavToAWX"               class="btnLeftList"/>
-                        <Button     id="ambari"              text="Ambari(admin/admin123)"  press=".onNavToAmbari"            class="btnLeftList"/>
-                        <Button     id="grafana"             text="Grafana(admin/admin)"    press=".onNavToGrafana"           class="btnLeftList"/>
-                        <Button     id="prometheus"          text="Prometheus Server"       press=".onNavToPrometheus"        class="btnLeftList"/>
-                        <Button     id="prometheus_fsimage"  text="Prometheus FSImage"      press=".onNavToPrometheusFSImage" class="btnLeftList"/>
-                        <Button     id="prometheus_node"     text="Prometheus Node"         press=".onNavToPrometheusNode"    class="btnLeftList"/>
+                        <Button     id="contents1"           text="contents1"       press=".onNavToContent1"          class="btnLeftList"/>
+                        <Button     id="contents2"           text="contents2"       press=".onNavToContent2"          class="btnLeftList"/>
+                        <Button     id="contents3"           text="contents3"       press=".onNavToContent3"          class="btnLeftList"/>
+                        <Button     id="contents4"           text="contents4"       press=".onNavToContent4"          class="btnLeftList"/>
+                        <Button     id="contents5"           text="contents5"       press=".onNavToContent5"          class="btnLeftList"/>
+                        <Button     id="contents6"           text="contents6"       press=".onNavToContent6"          class="btnLeftList"/>
+                        <Button     id="contents7"           text="contents7"       press=".onNavToContent7"          class="btnLeftList"/>
+                        <Button     id="contents8"           text="contents8"       press=".onNavToContent8"          class="btnLeftList"/>
                     </VBox>
                 </l:VerticalLayout>
             </VBox>

@@ -3,11 +3,11 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:l="sap.ui.layout"
     width="100%"
-    controllerName="OpenUI5.controller.frame.Layout">
+    controllerName="OpenUI5.controller.frame.Layout"
+>
+    <mvc:XMLView id="headerView" viewName="OpenUI5.view.frame.Header" height="5%" class="BORDER_BLUE"/>
 
-    <mvc:XMLView id="headerView" viewName="OpenUI5.view.frame.Header" height="10%" class="BORDER_BLUE"/>
-
-    <ScrollContainer height="100%" class="resposiveMaster">
+    <ScrollContainer height="90%" class="resposiveMaster">
         <l:FixFlex vertical="false">
             <l:fixContent>
                 <mvc:XMLView id="leftView" class="leftView" viewName="OpenUI5.view.frame.Left"/>
@@ -18,6 +18,6 @@
         </l:FixFlex>
     </ScrollContainer>
     
-    <mvc:XMLView id="footerView" viewName="OpenUI5.view.frame.Footer" height="10%" class="BORDER_YELLOW"/>
+    <mvc:XMLView id="footerView" viewName="OpenUI5.view.frame.Footer" height="5%" class="BORDER_YELLOW"/>
 
 </mvc:View>
