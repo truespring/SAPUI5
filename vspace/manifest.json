@@ -20,7 +20,7 @@
     },
     "sap.ui5": {
       "rootView": {
-          "viewName": "OpenUI5.view.Layout",
+          "viewName": "OpenUI5.view.frame.Layout",
           "type": "XML",
           "async": true,
           "id": "app"
