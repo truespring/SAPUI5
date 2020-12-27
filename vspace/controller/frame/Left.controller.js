@@ -11,7 +11,7 @@ sap.ui.define([
 		onNavToContent1 : function() {
 			console.log("Left.js onNavToContent1 Clicked");
 			
-			var oRouter = this.getRouter();
+			var oRouter = this.getRouter(); // sap.ui.core.UIComponent.getRouterFor(this)와 같음
 			oRouter.navTo("contents1");
 		},
 		
