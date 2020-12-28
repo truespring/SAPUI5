@@ -21,6 +21,14 @@
         "resources": {
         	"css" : [{ "uri": "css/style.css", "id": "css" }]
         },
+		"config": {
+			"sample": {
+				"files": [
+					"feed.json",
+					"manifest.json"
+				]
+			}
+		},
         "models": {
         	"i18n": {
         		"type": "sap.ui.model.resource.ResourceModel",

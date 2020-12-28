@@ -4,9 +4,23 @@
 	xmlns:t="sap.ui.table"
 	xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout"
-	xmlns:html="http://www.w3.org/1999/xhtml"
     controllerName="OpenUI5.controller.contents.Contents2">
 
-	<Text text="Contents2"/>
-	
+	<FeedInput
+		post="onPost"
+		class="sapUiSmallMarginTopBottom" />
+	<List
+		showSeparators="Inner"
+		items="{/EntryCollection}" >
+		<FeedListItem
+			sender="{Author}"
+			icon="{AuthorPicUrl}"
+			senderPress="onSenderPress"
+			iconPress="onIconPress"
+			iconDensityAware="false"
+			info="{Type}"
+			timestamp="{Date}"
+			text="{Text}"
+			convertLinksToAnchorTags="All"/>
+	</List>
 </mvc:View>
