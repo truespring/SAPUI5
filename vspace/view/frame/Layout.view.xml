@@ -10,10 +10,10 @@
     <ScrollContainer height="90%" class="resposiveMaster">
         <l:FixFlex vertical="false">
             <l:fixContent>
-                <mvc:XMLView id="leftView" class="leftView" viewName="OpenUI5.view.frame.Left"/>
+                <mvc:XMLView id="leftView" class="leftView BORDER_RED" viewName="OpenUI5.view.frame.Left"/>
             </l:fixContent>
             <l:flexContent>
-                <App id="centerView" width="100%" class=""></App>
+                <App id="centerView" width="100%" class="BORDER_GREEN"></App>
             </l:flexContent>
         </l:FixFlex>
     </ScrollContainer>

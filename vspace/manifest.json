@@ -55,7 +55,8 @@
 			           { "name": "contents6",       "pattern": "contents6",         "target": "contents6"},
 			           { "name": "contents5",       "pattern": "contents5",         "target": "contents5"},
 			           { "name": "contents7",       "pattern": "contents7",         "target": "contents7"},
-			           { "name": "contents8",       "pattern": "contents8",         "target": "contents8"}
+					   { "name": "contents8",       "pattern": "contents8",         "target": "contents8"},
+					   { "name": "boardList",		"pattern": "boardList",			"target": "boardList"}
 			          ],
 			"targets": {
 				"contents1": {
@@ -105,7 +106,13 @@
                     "viewName": "Contents8",
                     "viewLevel": 1,
                     "viewId": "contents8"
-                }
+				},
+				"boardList": {
+					"viewPath": "OpenUI5.view.contents.board",
+					"viewName": "BoardList",
+					"viewLevel": 2,
+					"viewId": "boardList"
+				}
 			}
 		}
     }

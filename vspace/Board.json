@@ -1,0 +1,10 @@
+{
+    "Board": [
+        {
+            "BoardTitle": "1번 글",
+            "BoardAuthor": "1번 글 작성자",
+            "BoardContext": "1번 글 내용",
+            "BoardDate": "2020-12-28T00:00:00"
+        }
+    ]
+}
