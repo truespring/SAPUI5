@@ -159,4 +159,18 @@ div[id$=--contents2] div[id$=--map] > div:first-child > div:first-child > div:nt
 div[id$=--contents2] div[id$=--map] > div:first-child > div:first-child > div:nth-child(6) > div > div:nth-child(2) {width:100%;}
 /* map */
 
+/* side navi */
+.side-navigation-demo {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
 
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	max-width: 15rem;
+}

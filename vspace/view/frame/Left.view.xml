@@ -1,20 +1,20 @@
 <mvc:View
     xmlns="sap.m"
-    xmlns:t="sap.ui.table"
     xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:l="sap.ui.layout"
-    controllerName="OpenUI5.controller.frame.Left">
+    xmlns:tnt="sap.tnt"
+    controllerName="OpenUI5.controller.frame.Left"
+    class="side-navigation-demo"
+    height="90%">
 
-    <l:HorizontalLayout>
+    <!-- <l:HorizontalLayout>
         <l:content>
             <VBox>
-                <!-- <Image              class="mvpLogoType"     src="./images/Logo.png"/> -->
                 <l:VerticalLayout   class="">
-                <!-- Quick Start -->
+                Quick Start
                     <VBox class="">
                         <l:HorizontalLayout>
-                            <!-- <Image  src="./images/Ico_List.png"/> -->
                             <Text   text="Contests List"    class=""/>
                         </l:HorizontalLayout>
                         <Button     id="contents1"           text="contents1"       press=".onNavToContent1"          class="btnLeftList"/>
@@ -29,6 +29,23 @@
                 </l:VerticalLayout>
             </VBox>
         </l:content>
-    </l:HorizontalLayout>
-    
+    </l:HorizontalLayout> -->
+
+    <tnt:SideNavigation id="sideNavigation" selectedKey="subItem3">
+		<tnt:NavigationList>
+			<tnt:NavigationListItem text="top 1" icon="sap-icon://employee" expanded="false">
+				<tnt:NavigationListItem text="contents1" select=".onNavToContent1" />
+				<tnt:NavigationListItem text="contents2" select=".onNavToContent2"/>
+				<tnt:NavigationListItem text="contents3" select=".onNavToContent3"/>
+				<tnt:NavigationListItem text="contents4" select=".onNavToContent4"/>
+			</tnt:NavigationListItem>
+			<tnt:NavigationListItem text="top 2" icon="sap-icon://building" expanded="false">
+				<tnt:NavigationListItem text="contents5" select=".onNavToContent5"/>
+				<tnt:NavigationListItem text="contents6" select=".onNavToContent6"/>
+				<tnt:NavigationListItem text="contents7" select=".onNavToContent7"/>
+				<tnt:NavigationListItem text="contents8" select=".onNavToContent8"/>
+			</tnt:NavigationListItem>
+		</tnt:NavigationList>
+    </tnt:SideNavigation>
+
 </mvc:View>
