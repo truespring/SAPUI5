@@ -1,9 +1,8 @@
 sap.ui.define([
 	"OpenUI5/controller/common/BaseController",
 	"sap/ui/core/format/DateFormat",
-	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/json/JSONModel"
-], function(BaseController, DateFormat, Controller, JSONModel) {
+], function(BaseController, DateFormat, JSONModel) {
 	"use strict";
 		
 	return BaseController.extend("OpenUI5.controller.common.BaseController", {

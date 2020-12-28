@@ -15,7 +15,8 @@
         "dependencies": {
         	"libs": {
         		"sap.ui.layout": {},
-                "sap.m": {}
+				"sap.m": {},
+				"sap.ui.table": {}
             }
         }, 
         "resources": {
@@ -23,6 +24,7 @@
         },
 		"config": {
 			"sample": {
+				"stretch": true,
 				"files": [
 					"feed.json",
 					"manifest.json"
