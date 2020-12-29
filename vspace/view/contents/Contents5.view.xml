@@ -20,7 +20,7 @@
 				<Text text="Attachments go here ..." />
 			</IconTabFilter>
 			<IconTabFilter text="월별현황" key="notes">
-				<Text text="Notes go here ..." />
+    			<mvc:XMLView id="monthlyView" viewName="OpenUI5.view.contents5.Monthly"/>
 			</IconTabFilter>
 		</items>
 	</IconTabBar>
