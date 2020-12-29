@@ -10,6 +10,11 @@ sap.ui.define([
         onInit: function () {            
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+            
+			// set explored app's demo model on this sample
+			var oModel = new JSONModel(sap.ui.require.toUrl("sap/ui/demo/mock/contents5_1.json"));
+			this.getView().setModel(oModel);
+
         },
 
         // 디테일 화면

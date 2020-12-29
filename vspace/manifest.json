@@ -61,7 +61,7 @@
 			           { "name": "contents5",       "pattern": "contents5",         "target": "contents5"},
 			           { "name": "contents7",       "pattern": "contents7",         "target": "contents7"},
 					   { "name": "contents8",       "pattern": "contents8",         "target": "contents8"},
-					   { "pattern": "detail/{invoicePath}",	 "name": "detail",		 "target": "detail"  }
+					   { "name": "detail",			"pattern": "detail/{invoicePath}","target": "detail" }
 			          ],
 			"targets": {
 				"contents1": {
