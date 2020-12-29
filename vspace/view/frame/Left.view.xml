@@ -39,8 +39,8 @@
 				<tnt:NavigationListItem text="리스트" select=".onNavToContent3"/>
 				<tnt:NavigationListItem text="게시판" select=".onNavToContent4"/>
 			</tnt:NavigationListItem>
-			<tnt:NavigationListItem text="카피" icon="sap-icon://building" expanded="false">
-				<tnt:NavigationListItem text="contents5" select=".onNavToContent5"/>
+			<tnt:NavigationListItem text="생산관리" icon="sap-icon://building" expanded="false">
+				<tnt:NavigationListItem text="생산관리계획" select=".onNavToContent5"/>
 				<tnt:NavigationListItem text="contents6" select=".onNavToContent6"/>
 			</tnt:NavigationListItem>
             <tnt:NavigationListItem text="카피" icon="sap-icon://card" expanded="false">

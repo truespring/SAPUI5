@@ -1,5 +1,9 @@
 sap.ui.define([
-	"OpenUI5/controller/common/BaseController"
+	"OpenUI5/controller/common/BaseController",
+	'sap/ui/unified/DateRange',
+	'sap/m/MessageToast',
+	'sap/ui/core/format/DateFormat',
+	'sap/ui/core/library'
 ], function(BaseController) {
 	"use strict";
 		

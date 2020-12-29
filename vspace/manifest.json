@@ -1,4 +1,5 @@
 {
+	"_version": "1.21.0",
     "sap.app": {
 		"id": "openUI5",
         "applicationVersion": {
@@ -37,7 +38,11 @@
                 "settings": {
 				"bundleName": "OpenUI5.i18n.i18n"
 				}
-            }
+			},
+			"invoice": {
+			  "type": "sap.ui.model.json.JSONModel",
+			  "uri": "Board.json"
+			}
         },
 		"routing": {
 			"config": {
@@ -56,7 +61,7 @@
 			           { "name": "contents5",       "pattern": "contents5",         "target": "contents5"},
 			           { "name": "contents7",       "pattern": "contents7",         "target": "contents7"},
 					   { "name": "contents8",       "pattern": "contents8",         "target": "contents8"},
-					   { "name": "boardList",		"pattern": "boardList",			"target": "boardList"}
+					   { "pattern": "detail/{invoicePath}",	 "name": "detail",		 "target": "detail"  }
 			          ],
 			"targets": {
 				"contents1": {
@@ -107,11 +112,11 @@
                     "viewLevel": 1,
                     "viewId": "contents8"
 				},
-				"boardList": {
-					"viewPath": "OpenUI5.view.contents.board",
-					"viewName": "BoardList",
+				"detail": {
+					"viewPath": "OpenUI5.view.contents5",
+					"viewName": "Detail",
 					"viewLevel": 2,
-					"viewId": "boardList"
+					"viewId": "detail"
 				}
 			}
 		}
