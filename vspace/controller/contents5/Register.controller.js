@@ -10,10 +10,7 @@ sap.ui.define([
     return Controller.extend("OpenUI5.controller.Register", {
         formatter: formatter,
         onInit : function () {
-            var oViewModel = new JSONModel({
-                currency: "EUR"
-            });
-            this.getView().setModel(oViewModel, "view");
+            
         },
         onFilterInvoices : function (oEvent) {
 

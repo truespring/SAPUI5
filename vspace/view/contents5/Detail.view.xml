@@ -1,13 +1,15 @@
 <mvc:View
     controllerName="OpenUI5.controller.contents5.Detail"
     xmlns="sap.m"
+    xmlns:t="sap.ui.table"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:wt="sap.ui.demo.walkthrough.control">
+		<Text text="생산관리계획"/>
     <Page
         title="{i18n>detailPageTitle}"
         showNavButton="true"
         navButtonPress=".onNavBack">
-        <ObjectHeader
+        <!-- <ObjectHeader
             responsive="true"
             fullScreenOptimized="true"
             number="{
@@ -32,6 +34,62 @@
                     }
                 }"/>
             </attributes>
-        </ObjectHeader>
+        </ObjectHeader> -->
+        <HBox>
+            <Text text="{i18n>columnOrder}" class="sapUiSmallMarginEnd"/>
+            <Text text="{invoice>OrderNo}"/>
+        </HBox>
+        <HBox>
+            <Text text="{i18n>columnSupplier}" class="sapUiSmallMarginEnd"/>
+            <Text text="{invoice>Supplier}"/>
+        </HBox>
+        <HBox>
+            <Text text="{i18n>columnDeadline}" class="sapUiSmallMarginEnd"/>
+            <Text text="{invoice>Deadline}"/>
+        </HBox>
+        <HBox>
+            <Text text="{i18n>columnName}" class="sapUiSmallMarginEnd"/>
+            <Text text="{invoice>Name}"/>
+        </HBox>
+        <HBox>
+            <Text text="{i18n>columnSize}" class="sapUiSmallMarginEnd"/>
+            <Text text="{invoice>Size}"/>
+        </HBox>
+        <HBox>
+            <Text text="{i18n>columnQuantity}" class="sapUiSmallMarginEnd"/>
+            <Text text="{invoice>Quantity}"/>
+        </HBox>
+        <HBox>
+        <!-- 생산 수량 -->
+            <Text text="{i18n>quantityProduction}" class="sapUiSmallMarginEnd"/>
+            <Input type="Number" value="100" placeholder="생산수량"/>
+        </HBox>
+        <HBox>
+        <!-- 계획 기간 -->
+            <Text text="{i18n>planningPeriod}" class="sapUiSmallMarginEnd"/>
+            <Input type="Date"/>
+            <Input type="Date" value="2020-12-29"/>
+        </HBox>
+        <HBox>
+        <!-- 원자재 -->
+            <Text text="{i18n>columnResource}" class="sapUiSmallMarginEnd"/>
+            
+        </HBox>
+        <HBox>
+        <!-- 소요량 -->
+            <Text text="{i18n>columnAmount}" class="sapUiSmallMarginEnd"/>
+            <Input type="Number" value="0" placeholder="소요량"/>
+        </HBox>
+        <HBox>
+        <!-- 외주 여부 -->
+            <Text text="{i18n>outsorucing}" class="sapUiSmallMarginEnd"/>
+            
+        </HBox>
+        <Button
+            text="저장"
+            press=".onNavSave"/>
+        <Button
+            text="목록"
+            press=".onNavBack"/>
     </Page>
 </mvc:View>

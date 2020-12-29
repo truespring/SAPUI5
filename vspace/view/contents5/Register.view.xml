@@ -5,7 +5,7 @@
 	<Panel accessibleRole="Region">
 		<headerToolbar>
 			<Toolbar>
-				<Title text="{i18n>invoiceListTitle}"/>
+				<Title text="생산관리계획"/>
 				<ToolbarSpacer/>
 				<SearchField
 					width="50%"
@@ -20,11 +20,7 @@
 			class="sapUiResponsiveMargin"
 			width="auto"
 			items="{
-				path : 'invoice>/Invoices',
-				sorter : {
-					path : 'ShipperName',
-					group : true
-				}
+				path : 'invoice>/Product_product'
 			}">
 			<columns>
 				<Column
@@ -32,24 +28,46 @@
 					minScreenWidth="Small"
 					demandPopin="true"
 					width="4em">
-					<Text text="{i18n>columnQuantity}"/>
-				</Column>
-				<Column>
-					<Text text="{i18n>columnName}"/>
+					<Text text="{i18n>columnNumber}"/>
 				</Column>
 				<Column
 					minScreenWidth="Small"
 					demandPopin="true">
-					<Text text="{i18n>columnStatus}"/>
+					<Text text="{i18n>columnOrder}"/>
 				</Column>
 				<Column
-					minScreenWidth="Tablet"
-					demandPopin="false">
+					minScreenWidth="Small"
+					demandPopin="true">
 					<Text text="{i18n>columnSupplier}"/>
 				</Column>
 				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnName}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnSize}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnQuantity}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnDeadline}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnResource}"/>
+				</Column>
+				<Column
 					hAlign="End">
-					<Text text="{i18n>columnPrice}"/>
+					<Text text="{i18n>columnAmount}"/>
 				</Column>
 			</columns>
 			<items>
@@ -57,23 +75,21 @@
 					type="Navigation"
 					press=".onPress">
 					<cells>
-						<ObjectNumber number="{invoice>Quantity}" emphasized="false"/>
-						<ObjectIdentifier title="{invoice>ProductName}"/>
-						<Text text="{
-							path: 'invoice>Status',
-							formatter: '.formatter.statusText'
-						}"/>
-						<Text text="{invoice>ShipperName}"/>
 						<ObjectNumber
 							number="{
-								parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
-								type: 'sap.ui.model.type.Currency',
+								parts: [{path: 'invoice>Number'}],
 								formatOptions: {
-									showMeasure: false
+									showMeasure: true
 								}
-							}"
-							unit="{view>/currency}"
-							state="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"/>
+							}"/>
+						<Text text="{invoice>OrderNo}"/>
+						<Text text="{invoice>Supplier}"/>
+						<Text text="{invoice>Name}"/>
+						<Text text="{invoice>Size}"/>
+						<ObjectNumber number="{invoice>Quantity}" emphasized="false"/>
+						<Text text="{invoice>Deadline}"/>
+						<Text text="{invoice>Resource}"/>
+						<ObjectNumber number="{invoice>Amount}" emphasized="false"/>
 					</cells>
 				</ColumnListItem>
 			</items>

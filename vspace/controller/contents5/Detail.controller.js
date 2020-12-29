@@ -7,12 +7,7 @@ sap.ui.define([
 ], function (Controller, History, MessageToast, JSONModel, UIComponent) {
     "use strict";
     return Controller.extend("sap.ui.deme.walkthrough.controller.Detail", {
-        onInit: function () {
-            var oViewModel = new JSONModel({
-                currency: "EUR"
-            });
-            this.getView().setModel(oViewModel, "view");
-            
+        onInit: function () {            
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
             oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
         },
@@ -37,11 +32,10 @@ sap.ui.define([
                 oRouter.navTo("contents5", {}, true);
             }
         },
-
-        onRatingChange: function (oEvent) {
-            var fValue = oEvent.getParameter("value");
-            var oResourceBundle = this.getView().getModel("i18n").getResourceBundle();
-            MessageToast.show(oResourceBundle.getText("ratingConfirmation", [fValue]));
+        onNavSave: function () {
+            alert("저장되었습니다.");
+            var oRouter = UIComponent.getRouterFor(this);
+            oRouter.navTo("contents5", {}, true);
         }
     });
 });

@@ -40,5 +40,29 @@
 	  "ShippedDate": "2015-01-27T00:00:00",
 	  "Status": "A"
 	}
+  ],
+  "Product_product": [
+	  {
+		  "Number": 1,
+		  "OrderNo": "JBC-200629-01-0002",
+		  "Supplier": "(주)벡셀",
+		  "Name": "개패시터",
+		  "Size": "-",
+		  "Quantity": 100,
+		  "Deadline": "2020-06-26",
+		  "Resource": "BMS",
+		  "Amount": 0
+	  },
+	  {
+		"Number": 2,
+		"OrderNo": "JBC-200629-01-0001",
+		"Supplier": "(주)벡셀",
+		"Name": "BAT",
+		"Size": "-",
+		"Quantity": 100,
+		"Deadline": "2020-06-26",
+		"Resource": "BMS",
+		"Amount": 0
+	}
   ]
 }
