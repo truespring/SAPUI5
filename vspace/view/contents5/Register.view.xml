@@ -24,7 +24,6 @@
 			}">
 			<columns>
 				<Column
-					hAlign="End"
 					minScreenWidth="Small"
 					demandPopin="true"
 					width="4em">
@@ -32,6 +31,7 @@
 				</Column>
 				<Column
 					minScreenWidth="Small"
+					width="12em"
 					demandPopin="true">
 					<Text text="{i18n>columnOrder}"/>
 				</Column>
@@ -65,8 +65,7 @@
 					demandPopin="false">
 					<Text text="{i18n>columnResource}"/>
 				</Column>
-				<Column
-					hAlign="End">
+				<Column>
 					<Text text="{i18n>columnAmount}"/>
 				</Column>
 			</columns>

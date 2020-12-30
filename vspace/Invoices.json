@@ -43,15 +43,15 @@
   ],
   "Product_product": [
 	  {
-		  "Number": 1,
-		  "OrderNo": "JBC-200629-01-0002",
-		  "Supplier": "(주)벡셀",
-		  "Name": "개패시터",
-		  "Size": "-",
-		  "Quantity": 100,
-		  "Deadline": "2020-06-26",
-		  "Resource": "BMS",
-		  "Amount": 0
+		"Number": 1,
+		"OrderNo": "JBC-200629-01-0002",
+		"Supplier": "(주)벡셀",
+		"Name": "개패시터",
+		"Size": "-",
+		"Quantity": 100,
+		"Deadline": "2020-06-26",
+		"Resource": "BMS",
+		"Amount": 0
 	  },
 	  {
 		"Number": 2,
@@ -67,9 +67,40 @@
   ],
   "Monthly": [
 	  {
-		  "100": 100,
-		  "250": 250,
-		  "350": 350
+		"Name": "E6 BAT",
+		"Size": "-",
+		"Division": "계획실적(%)",
+		"One": ".",
+		"Two": ".",
+		"Three": ".",
+		"Four": ".",
+		"Five": ".",
+		"Six": "100",
+		"Seven": ".",
+		"Eight": ".",
+		"Nine": ".",
+		"Ten": ".",
+		"Eleven": ".",
+		"Tweleve": ".",
+		"Total": "100"
+	  },
+	  {
+		"Name": "슈퍼 캐패시터",
+		"Size": "-",
+		"Division": "계획실적(%)",
+		"One": ".",
+		"Two": ".",
+		"Three": ".",
+		"Four": ".",
+		"Five": ".",
+		"Six": "250",
+		"Seven": ".",
+		"Eight": ".",
+		"Nine": ".",
+		"Ten": ".",
+		"Eleven": ".",
+		"Tweleve": ".",
+		"Total": "350"
 	  }
   ]
 }

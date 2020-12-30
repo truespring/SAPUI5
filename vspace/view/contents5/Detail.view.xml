@@ -66,7 +66,7 @@
         <!-- 계획 기간 -->
             <Text text="{i18n>planningPeriod}" class="sapUiSmallMarginEnd"/>
             <Input type="Date"/>
-            <Input type="Date" value="2020-12-29"/>
+            <Input type="Date"/>
         </HBox>
         <HBox>
         <!-- 원자재 -->

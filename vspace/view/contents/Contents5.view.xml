@@ -17,7 +17,7 @@
     			<mvc:XMLView id="registerView" viewName="OpenUI5.view.contents5.Register"/>
 			</IconTabFilter>
 			<IconTabFilter text="주간현황" key="attachments">
-				<Text text="Attachments go here ..." />
+    			<mvc:XMLView id="weeklyView" viewName="OpenUI5.view.contents5.Weekly"/>
 			</IconTabFilter>
 			<IconTabFilter text="월별현황" key="notes">
     			<mvc:XMLView id="monthlyView" viewName="OpenUI5.view.contents5.Monthly"/>
