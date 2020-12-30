@@ -5,19 +5,19 @@
     width="100%"
     controllerName="OpenUI5.controller.frame.Layout"
 >
-    <mvc:XMLView id="headerView" viewName="OpenUI5.view.frame.Header" height="5%" class="BORDER_BLUE"/>
+    <mvc:XMLView id="headerView" viewName="OpenUI5.view.frame.Header" height="5%" class="main-back"/>
 
     <ScrollContainer height="90%" class="resposiveMaster">
         <l:FixFlex vertical="false">
             <l:fixContent>
-                <mvc:XMLView id="leftView" class="leftView BORDER_RED" viewName="OpenUI5.view.frame.Left"/>
+                <mvc:XMLView id="leftView" class="leftView " viewName="OpenUI5.view.frame.Left"/>
             </l:fixContent>
             <l:flexContent>
-                <App id="centerView" width="100%" class="BORDER_GREEN"></App>
+                <App id="centerView" width="100%" class=""></App>
             </l:flexContent>
         </l:FixFlex>
     </ScrollContainer>
     
-    <mvc:XMLView id="footerView" viewName="OpenUI5.view.frame.Footer" height="5%" class="BORDER_YELLOW"/>
+    <mvc:XMLView id="footerView" viewName="OpenUI5.view.frame.Footer" height="5%" class=""/>
 
 </mvc:View>

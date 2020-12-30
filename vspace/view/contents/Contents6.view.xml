@@ -3,14 +3,13 @@
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
     controllerName="OpenUI5.controller.contents.Contents6">
-	<Text text="공정관리계획"/>
+	<Text text="공정관리계획" class="page-title title-font-style"/>
 	<Panel accessibleRole="Region">
 		<headerToolbar>
 			<Toolbar>
-				<Title text="공정관리계획"/>
 				<ToolbarSpacer/>
 				<SearchField
-					width="50%"
+					width="30%"
 					search=".onFilterInvoices"
 					ariaLabelledBy="searchFieldLabel"
 					ariaDescribedBy="searchFieldDescription"
@@ -26,45 +25,31 @@
 			}">
 			<columns>
 				<Column
-					minScreenWidth="Small"
-					demandPopin="true"
 					width="4em">
 					<Text text="{i18n>columnNumber}"/>
 				</Column>
 				<Column
-					minScreenWidth="Small"
-					width="12em"
-					demandPopin="true">
+					width="12em">
 					<Text text="{i18n>columnOrder}"/>
 				</Column>
-				<Column
-					minScreenWidth="Small"
-					demandPopin="true">
+				<Column>
 					<Text text="{i18n>columnSupplier}"/>
 				</Column>
 				<Column
-					minScreenWidth="Small"
-					demandPopin="false">
+					width="9em">
 					<Text text="{i18n>columnName}"/>
 				</Column>
-				<Column
-					minScreenWidth="Small"
-					demandPopin="false">
+				<Column>
 					<Text text="{i18n>columnSize}"/>
 				</Column>
-				<Column
-					minScreenWidth="Small"
-					demandPopin="false">
+				<Column>
 					<Text text="{i18n>columnQuantity}"/>
 				</Column>
 				<Column
-					minScreenWidth="Small"
-					demandPopin="false">
+					width="7em">
 					<Text text="{i18n>columnDeadline}"/>
 				</Column>
-				<Column
-					minScreenWidth="Small"
-					demandPopin="false">
+				<Column>
 					<Text text="{i18n>columnResource}"/>
 				</Column>
 				<Column>

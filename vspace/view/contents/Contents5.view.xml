@@ -4,7 +4,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
     controllerName="OpenUI5.controller.contents.Contents5">
 
-	<Text text="생산관리계획"/>
+	<Text text="생산관리계획" class="page-title title-font-style"/>
 		<IconTabBar
 		id="idIconTabBarNoIcons"
 		expanded="{device>/isNoPhone}"

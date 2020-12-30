@@ -2,17 +2,18 @@
 		controllerName="OpenUI5.controller.contents5.Register"
 		xmlns="sap.m"
 		xmlns:mvc="sap.ui.core.mvc">
+	<Text text="검색 기준일"/>
 	<Panel accessibleRole="Region">
 		<headerToolbar>
 			<Toolbar>
-				<Title text="생산관리계획"/>
+				<Input type="Date" width="30%"/>
 				<ToolbarSpacer/>
+				<Text text="Search:"/>
 				<SearchField
-					width="50%"
+					width="20%"
 					search=".onFilterInvoices"
 					ariaLabelledBy="searchFieldLabel"
-					ariaDescribedBy="searchFieldDescription"
-					placeholder="검색"/>
+					ariaDescribedBy="searchFieldDescription"/>
 			</Toolbar>
 		</headerToolbar>
 		<Table
@@ -42,7 +43,8 @@
 				</Column>
 				<Column
 					minScreenWidth="Small"
-					demandPopin="false">
+					demandPopin="false"
+					width="6em">
 					<Text text="{i18n>columnName}"/>
 				</Column>
 				<Column
@@ -57,7 +59,7 @@
 				</Column>
 				<Column
 					minScreenWidth="Small"
-					demandPopin="false">
+					width="8em">
 					<Text text="{i18n>columnDeadline}"/>
 				</Column>
 				<Column

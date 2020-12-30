@@ -40,7 +40,11 @@ input:focus 	{ outline: 		none !important; border: none !important; outline-offs
 			
 /* BASE STYLES SETTING END																	*/
 
-/* side navi */
+/* FONT */
+@font-face {font-family: 'GmarketSansMedium';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');font-weight: normal;font-style: normal;}
+/* FONT END */
+
+/* SIDE NAVI */
 .side-navigation-demo {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -55,3 +59,12 @@ input:focus 	{ outline: 		none !important; border: none !important; outline-offs
 
 	max-width: 15rem;
 }
+/* SIDE NAVI END */
+
+/* STYLE SETTING */
+.main-back {	background-color:#263238DE;	}
+.title-font-style {	font-weight: bold;	font-size: 1.3rem;	font-family: 'GmarketSansMedium', serif;}
+.main-title {	margin-top: 8px;	margin-left: 40px;	color: white;}
+.page-title	{	margin-top: 10px;	margin-left: 20px;}
+.HBox-rows {	height: 50px; position: relative; align-items: center; margin-left: 30px;}
+.rows-width {	width: 60px}
