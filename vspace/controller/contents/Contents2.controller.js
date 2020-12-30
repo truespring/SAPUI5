@@ -9,6 +9,7 @@ sap.ui.define([
 
 		onInit : function () {
 			console.log("Contents2.js OnInit()");
+            window.contents2 = this; 
 			// set mock model
 			var sPath = sap.ui.require.toUrl("OpenUI5/feed.json");
 			var oModel = new JSONModel(sPath);

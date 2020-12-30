@@ -1,0 +1,60 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog
+        id="processDialog"
+        title="{i18n>processDialogTitle}">
+        <Table>
+            <columns>
+                <Column>
+                    <Text text="공정 선택"/>
+                    <Table
+                        id="process_select"
+                        class=""
+                        items="{
+                            path : 'invoice>/Process_sel'
+                        }">
+                        <columns>
+                            <Column>
+                                <Text text="{i18n>columnNumber}"/>
+                            </Column>
+                            <Column>
+                                <Text text="{i18n>processName}"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                   <ObjectNumber
+                                        number="{
+                                            parts: [{path: 'invoice>Number'}],
+                                            formatOptions: {
+                                                showMeasure: true
+                                            }
+                                        }"/>
+                                    <Text text="{invoice>Name}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </Column>
+                <Column>
+                    <Text text="세부 공정(장비) 선택"/>
+                </Column>
+                <Column>
+                    <Text text="최종 공정 확인"/>
+                </Column>
+            </columns>
+        </Table>
+        <beginButton>
+            <Button
+                text="등록"
+                press=".onSaveDialog"/>
+        </beginButton>
+        <endButton>
+            <Button
+                text="닫기"
+                press=".onCloseDialog"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

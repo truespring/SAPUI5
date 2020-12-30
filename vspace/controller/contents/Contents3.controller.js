@@ -13,6 +13,7 @@ sap.ui.define([
 	return BaseController.extend("OpenUI5.controller.common.BaseController", {
 
 		onInit : function () {
+            window.contents3 = this; 
 			console.log("Contents3.js OnInit()");
 			var oView = this.getView();
 

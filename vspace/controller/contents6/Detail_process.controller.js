@@ -1,9 +1,8 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/core/routing/History",
     "sap/ui/model/json/JSONModel",
-    "sap/ui/core/UIComponent"
-], function (Controller, History, JSONModel, UIComponent) {
+	"sap/ui/core/Fragment"
+], function (Controller, JSONModel, Fragment) {
     "use strict";
     return Controller.extend("sap.ui.deme.walkthrough.controller.Detail_process", {
         onInit: function () {            
@@ -11,7 +10,7 @@ sap.ui.define([
             oRouter.getRoute("detail_process").attachPatternMatched(this._onObjectMatched, this);
             
 			// set explored app's demo model on this sample
-			var oModel = new JSONModel(sap.ui.require.toUrl("sap/ui/demo/mock/contents5_1.json"));
+			var oModel = new JSONModel(sap.ui.require.toUrl("sap/ui/demo/mock/contents6_1.json"));
 			this.getView().setModel(oModel);
 
         },
@@ -24,22 +23,33 @@ sap.ui.define([
             });
         },
 
-        // 뒤로 가기 버튼
-        onNavBack: function () {
-            var oHistory = History.getInstance();
-            var sPreviousHash = oHistory.getPreviousHash();
+        // 공정설정 & 검색 화면
+        onOpenDialog : function () {
+            var oView = this.getView();
 
-            if (sPreviousHash !== undefined) {
-                window.history.go(-1);
-            } else {
-                var oRouter = UIComponent.getRouterFor(this);
-                oRouter.navTo("contents6", {}, true);
+            if(!this.pDialog) {
+                this.pDialog = Fragment.load({
+                    id: oView.getId(),
+                    name: "OpenUI5.view.contents6.processDialog",
+                    controller: this
+                }).then(function (oDialog) {
+                    oView.addDependent(oDialog);
+                    return oDialog;
+                });
             }
+
+            this.pDialog.then(function(oDialog) {
+                oDialog.open();
+            });
         },
-        onNavSave: function () {
-            alert("저장되었습니다.");
-            var oRouter = UIComponent.getRouterFor(this);
-            oRouter.navTo("contents6", {}, true);
+
+        onCloseDialog : function () {
+            this.byId("processDialog").close();
+        },
+
+        onSaveDialog : function () {
+            alert("저장되었습니다.")
+            this.byId("processDialog").close();
         }
     });
 });

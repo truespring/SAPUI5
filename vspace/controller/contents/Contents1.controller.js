@@ -7,9 +7,11 @@ sap.ui.define([
     {
         onInit : function ()
         {
-        	window.contents1 = this;
+            // 브라우저 개발자창에서 window.contents1으로 데이터를 찾아들어갈 수 있음
+            // 모든 메인 페이지에 작성해줘야함
+            window.contents1 = this; 
             console.log("Content1.js onInit()")
-        },
+        }
         
     });
 }, true);

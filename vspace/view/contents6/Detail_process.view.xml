@@ -5,7 +5,7 @@
     xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
     xmlns:l="sap.ui.layout">
-    <Text text="공정관리계획"/>
+    <Text text="공정관리계획" class="title-font-style page-title"/>
     <Panel accessibleRole="Region">
         <Table
             id="detail_process"
@@ -14,53 +14,30 @@
             items="{
 				path : 'invoice>/Process_plan'
 			}">
-            <columns>
-                <Column
-                    minScreenWidth="Small"
-                    demandPopin="true"
-                    width="5em">
+            <columns
+                class="HBox-rows">
+                <Column>
                     <Text text="{i18n>columnNumber}"/>
                 </Column>
-                <Column
-                    minScreenWidth="Small"
-                    demandPopin="true"
-                    width="6em">
+                <Column>
                     <Text text="{i18n>processName}"/>
                 </Column>
-                <Column
-                    minScreenWidth="Small"
-                    demandPopin="true"
-                    width="6em">
+                <Column>
                     <Text text="{i18n>columnQuantity}"/>
                 </Column>
-                <Column
-                    minScreenWidth="Small"
-                    demandPopin="true"
-                    width="6em">
+                <Column>
                     <Text text="{i18n>outsorucing}"/>
                 </Column>
-                <Column
-                    minScreenWidth="Small"
-                    demandPopin="true"
-                    width="6em">
+                <Column>
                     <Text text="{i18n>startday}"/>
                 </Column>
-                <Column
-                    minScreenWidth="Small"
-                    demandPopin="true"
-                    width="6em">
+                <Column>
                     <Text text="{i18n>endday}"/>
                 </Column>
-                <Column
-                    minScreenWidth="Small"
-                    demandPopin="true"
-                    width="6em">
+                <Column>
                     <Text text="{i18n>leadday}"/>
                 </Column>
-                <Column
-                    minScreenWidth="Small"
-                    demandPopin="true"
-                    width="6em">
+                <Column>
                     <Text text="{i18n>worker}"/>
                 </Column>
             </columns>
@@ -76,16 +53,34 @@
 							}"/>
 						<Text text="{invoice>Name}"/>
 						<ObjectNumber number="{invoice>Quantity}" emphasized="false"/>
+                        <l:VerticalLayout
+                            class=""
+                            width="100%">
+                            <ActionSelect
+                                id="sel_out"
+                                items="{
+                                    path: '/Outsourcing',
+                                    sorter: { path: 'Name' }
+                                }">
+                                <items
+                                templateShareable="true">
+                                    <core:Item key="{Name}" text="{Name}" />
+                                </items>
+                            </ActionSelect>
+                        </l:VerticalLayout>
+                        <Input type="Date"/>
+                        <Input type="Date"/>
 						<ObjectNumber number="{invoice>lead}" emphasized="false"/>
+						<ObjectNumber number="{invoice>worker}" emphasized="false"/>
 					</cells>
 				</ColumnListItem>
 			</items>
         </Table>
         <Button
-            text="저장"
-            press=".onNavSave"/>
+            text="도면등록"/>
         <Button
-            text="목록"
-            press=".onNavBack"/>
+            id="processDialogButton"
+            text="공정 설정/추가"
+            press=".onOpenDialog"/>
     </Panel>
 </mvc:View>

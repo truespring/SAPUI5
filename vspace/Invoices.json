@@ -184,5 +184,35 @@
 		  "lead": 4,
 		  "worker": "김재헌"
 	  }
+  ],
+  "Process_sel": [
+	  {
+		  "Number": 1,
+		  "Name": "검사"
+	  },
+	  {
+		  "Number": 2,
+		  "Name": "센싱"
+	  },
+	  {
+		  "Number": 3,
+		  "Name": "스팟"
+	  },
+	  {
+		  "Number": 4,
+		  "Name": "조립"
+	  },
+	  {
+		  "Number": 5,
+		  "Name": "납품"
+	  },
+	  {
+		  "Number": 6,
+		  "Name": "시험"
+	  },
+	  {
+		  "Number": 7,
+		  "Name": "출하"
+	  }
   ]
 }

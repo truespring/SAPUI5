@@ -6,6 +6,7 @@ sap.ui.define([
 	return BaseController.extend("OpenUI5.controller.common.BaseController", {
 
 		onInit : function () {
+            window.contents8 = this; 
 			console.log("Contents8.js OnInit()");
 		}
 	});

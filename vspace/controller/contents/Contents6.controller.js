@@ -6,6 +6,7 @@ sap.ui.define([
 	return BaseController.extend("OpenUI5.controller.common.BaseController", {
 
 		onInit : function () {
+            window.contents6 = this; 
 			console.log("Contents6.js OnInit()");
 		},
         onFilterInvoices : function (oEvent) {
