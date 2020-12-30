@@ -1,8 +1,99 @@
 <mvc:View
-	xmlns="sap.m" xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:l="sap.ui.layout"
     controllerName="OpenUI5.controller.contents.Contents6">
-
-	<Text text="Contents6"/>
+	<Text text="공정관리계획"/>
+	<Panel accessibleRole="Region">
+		<headerToolbar>
+			<Toolbar>
+				<Title text="공정관리계획"/>
+				<ToolbarSpacer/>
+				<SearchField
+					width="50%"
+					search=".onFilterInvoices"
+					ariaLabelledBy="searchFieldLabel"
+					ariaDescribedBy="searchFieldDescription"
+					placeholder="검색"/>
+			</Toolbar>
+		</headerToolbar>
+		<Table
+			id="invoiceList"
+			class="sapUiResponsiveMargin"
+			width="auto"
+			items="{
+				path : 'invoice>/Process_product'
+			}">
+			<columns>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="true"
+					width="4em">
+					<Text text="{i18n>columnNumber}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					width="12em"
+					demandPopin="true">
+					<Text text="{i18n>columnOrder}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="true">
+					<Text text="{i18n>columnSupplier}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnName}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnSize}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnQuantity}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnDeadline}"/>
+				</Column>
+				<Column
+					minScreenWidth="Small"
+					demandPopin="false">
+					<Text text="{i18n>columnResource}"/>
+				</Column>
+				<Column>
+					<Text text="{i18n>columnAmount}"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem
+					type="Navigation"
+					press=".onPress">
+					<cells>
+						<ObjectNumber
+							number="{
+								parts: [{path: 'invoice>Number'}],
+								formatOptions: {
+									showMeasure: true
+								}
+							}"/>
+						<Text text="{invoice>OrderNo}"/>
+						<Text text="{invoice>Supplier}"/>
+						<Text text="{invoice>Name}"/>
+						<Text text="{invoice>Size}"/>
+						<ObjectNumber number="{invoice>Quantity}" emphasized="false"/>
+						<Text text="{invoice>Deadline}"/>
+						<ObjectNumber number="{invoice>Resource}" emphasized="false"/>
+						<ObjectNumber number="{invoice>Amount}" emphasized="false"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Panel>
 </mvc:View>

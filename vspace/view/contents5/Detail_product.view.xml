@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="OpenUI5.controller.contents5.Detail"
+    controllerName="OpenUI5.controller.contents5.Detail_product"
     xmlns="sap.m"
     xmlns:t="sap.ui.table"
     xmlns:mvc="sap.ui.core.mvc"

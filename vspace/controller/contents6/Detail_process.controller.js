@@ -1,15 +1,14 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/routing/History",
-    "sap/m/MessageToast",
     "sap/ui/model/json/JSONModel",
     "sap/ui/core/UIComponent"
-], function (Controller, History, MessageToast, JSONModel, UIComponent) {
+], function (Controller, History, JSONModel, UIComponent) {
     "use strict";
-    return Controller.extend("sap.ui.deme.walkthrough.controller.Detail", {
+    return Controller.extend("sap.ui.deme.walkthrough.controller.Detail_process", {
         onInit: function () {            
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
+            oRouter.getRoute("detail_process").attachPatternMatched(this._onObjectMatched, this);
             
 			// set explored app's demo model on this sample
 			var oModel = new JSONModel(sap.ui.require.toUrl("sap/ui/demo/mock/contents5_1.json"));
@@ -34,13 +33,13 @@ sap.ui.define([
                 window.history.go(-1);
             } else {
                 var oRouter = UIComponent.getRouterFor(this);
-                oRouter.navTo("contents5", {}, true);
+                oRouter.navTo("contents6", {}, true);
             }
         },
         onNavSave: function () {
             alert("저장되었습니다.");
             var oRouter = UIComponent.getRouterFor(this);
-            oRouter.navTo("contents5", {}, true);
+            oRouter.navTo("contents6", {}, true);
         }
     });
 });

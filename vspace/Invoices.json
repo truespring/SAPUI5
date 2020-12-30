@@ -102,5 +102,87 @@
 		"Tweleve": ".",
 		"Total": "350"
 	  }
+  ],
+  "Process_product": [
+	  {
+		"Number": 1,
+		"OrderNo": "JBC-200629-01-0002",
+		"Supplier": "(주)벡셀",
+		"Name": "슈퍼 개패시터",
+		"Size": "-",
+		"Quantity": 100,
+		"Deadline": "2020-06-26",
+		"Resource": 2,
+		"Amount": 0
+	  },
+	  {
+		"Number": 2,
+		"OrderNo": "WSK-200629-01-0001",
+		"Supplier": "슈퍼 쏘코",
+		"Name": "울트라 캐패시터",
+		"Size": "-",
+		"Quantity": 200,
+		"Deadline": "2020-05-15",
+		"Resource": 2,
+		"Amount": 0
+	},
+	{
+	  "Number": 2,
+	  "OrderNo": "WSK-200629-02-0001",
+	  "Supplier": "슈퍼 쏘코",
+	  "Name": "슈퍼 캐패시터",
+	  "Size": "-",
+	  "Quantity": 150,
+	  "Deadline": "2020-05-01",
+	  "Resource": 1,
+	  "Amount": 0
+  }
+  ],
+  "Process_plan":[
+	  {
+		  "Number": 1,
+		  "Name": "검사",
+		  "Quantity": 200,
+		  "start": "",
+		  "end": "",
+		  "lead": 4,
+		  "worker": "김재헌"
+	  },
+	  {
+		  "Number": 2,
+		  "Name": "스팟",
+		  "Quantity": 200,
+		  "start": "",
+		  "end": "",
+		  "lead": 11,
+		  "worker": "김재헌"
+	  },
+	  {
+		  "Number": 3,
+		  "Name": "센싱",
+		  "Quantity": 200,
+		  "start": "",
+		  "end": "",
+		  "lead": 18,
+		  "worker": "박선규"
+	  },
+	  {
+		  "Number": 4,
+		  "Name": "조립",
+		  "Quantity": 200,
+		  "start": "",
+		  "end": "",
+		  "lead": 17,
+		  "worker": "박선규"
+	  },
+	  {
+		  "Number": 5,
+		  "Name": "시험",
+		  "Quantity": 200,
+		  "start": "",
+		  "end": "",
+		  "lead": 4,
+		  "worker": "김재헌"
+	  }
   ]
 }
