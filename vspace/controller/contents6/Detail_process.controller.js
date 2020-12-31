@@ -16,12 +16,12 @@ sap.ui.define([
         },
 
         // 디테일 화면
-        _onObjectMatched: function (oEvent) {
-            this.getView().bindElement({
-                path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
-                model: "invoice"
-            });
-        },
+        // _onObjectMatched: function (oEvent) {
+        //     this.getView().bindElement({
+        //         path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
+        //         model: "invoice"
+        //     });
+        // },
 
         // 공정설정 & 검색 화면
         onOpenDialog : function () {
@@ -50,6 +50,35 @@ sap.ui.define([
         onSaveDialog : function () {
             alert("저장되었습니다.")
             this.byId("processDialog").close();
+        },
+
+        // 공정관리
+        onOpenManagementDialog : function () {
+            var oView_1 = this.getView();
+
+            if(!this.pDialog) {
+                this.pDialog = Fragment.load({
+                    id: oView_1.getId(),
+                    name: "OpenUI5.view.contents6.processManagement",
+                    controller: this
+                }).then(function (oDialog) {
+                    oView_1.addDependent(oDialog);
+                    return oDialog;
+                });
+            }
+
+            this.pDialog.then(function(oDialog) {
+                oDialog.open();
+            });
+        },
+
+        onCloseManagementDialog : function () {
+            this.byId("managementDialog").close();
+        },
+
+        onSaveManagementDialog : function () {
+            alert("저장되었습니다.")
+            this.byId("managementDialog").close();
         }
     });
 });
