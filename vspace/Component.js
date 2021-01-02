@@ -1,6 +1,7 @@
 sap.ui.define([
-    "sap/ui/core/UIComponent"
-], function (UIComponent) {
+    "sap/ui/core/UIComponent",
+    "./controller/contents6/ProcessDialog"
+], function (UIComponent, ProcessDialog) {
     "use strict";
 
     return UIComponent.extend("OpenUI5.Component", {
@@ -18,6 +19,16 @@ sap.ui.define([
             // create the views based on the url/hash
             var oRouter = this.getRouter();
             oRouter.initialize();
+
+            // set dialog
+			this._processDialog = new ProcessDialog(this.getRootControl());
+        },
+        exit : function () {
+            this._processDialog.destory();
+            delete this._processDialog;
+        },
+        openProcessDialog : function (path) {
+            this._processDialog.open(path);
         }
     });
 });

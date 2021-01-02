@@ -9,7 +9,8 @@
         <Text text="공정관리계획" class="title-font-style page-title"/>
         <Button
             text="공정관리"
-            press=".onOpenManagementDialog"/>
+            press=".onOpenProcessManagement"
+            id="processManagementButton"/>
         <Panel accessibleRole="Region">
             <Table
                 id="detail_process"
@@ -85,7 +86,7 @@
             <Button
                 id="processDialogButton"
                 text="공정 설정/추가"
-                press=".onOpenDialog"/>
+                press=".onOpenProcessDialog"/>
         </Panel>
     </Page>
 </mvc:View>
