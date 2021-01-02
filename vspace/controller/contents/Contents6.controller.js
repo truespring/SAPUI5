@@ -1,5 +1,5 @@
 sap.ui.define([
-	"OpenUI5/controller/common/BaseController"
+    "OpenUI5/controller/common/BaseController"
 ], function(BaseController) {
 	"use strict";
 		
@@ -7,7 +7,8 @@ sap.ui.define([
 
 		onInit : function () {
             window.contents6 = this; 
-			console.log("Contents6.js OnInit()");
+            console.log("Contents6.js OnInit()");
+            
 		},
         onFilterInvoices : function (oEvent) {
 

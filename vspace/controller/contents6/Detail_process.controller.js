@@ -14,6 +14,12 @@ sap.ui.define([
 			this.getView().setModel(oModel);
 
         },
+        onOpenProcessDialog : function() {
+            this.getOwnerComponent().openProcessDialog("processDialog");
+        },
+        onOpenProcessManagement : function() {
+            this.getOwnerComponent().openProcessDialog("processManagement");
+        },
 
         // 디테일 화면
         // _onObjectMatched: function (oEvent) {
@@ -24,61 +30,44 @@ sap.ui.define([
         // },
 
         // 공정설정 & 검색 화면
-        onOpenDialog : function () {
-            var oView = this.getView();
+        // onOpenDialog : function () {
+        //     var oView = this.getView();
 
-            if(!this.pDialog) {
-                this.pDialog = Fragment.load({
-                    id: oView.getId(),
-                    name: "OpenUI5.view.contents6.processDialog",
-                    controller: this
-                }).then(function (oDialog) {
-                    oView.addDependent(oDialog);
-                    return oDialog;
-                });
-            }
+        //     if(!this.pDialog) {
+        //         this.pDialog = Fragment.load({
+        //             id: oView.getId(),
+        //             name: "OpenUI5.view.contents6.processDialog",
+        //             controller: this
+        //         }).then(function (oDialog) {
+        //             oView.addDependent(oDialog);
+        //             return oDialog;
+        //         });
+        //     }
 
-            this.pDialog.then(function(oDialog) {
-                oDialog.open();
-            });
-        },
-
-        onCloseDialog : function () {
-            this.byId("processDialog").close();
-        },
-
-        onSaveDialog : function () {
-            alert("저장되었습니다.")
-            this.byId("processDialog").close();
-        },
+        //     this.pDialog.then(function(oDialog) {
+        //         oDialog.open();
+        //     });
+        // },
 
         // 공정관리
-        onOpenManagementDialog : function () {
-            var oView_1 = this.getView();
+        // onOpenManagementDialog : function () {
+        //     var oView_1 = this.getView();
 
-            if(!this.pDialog) {
-                this.pDialog = Fragment.load({
-                    id: oView_1.getId(),
-                    name: "OpenUI5.view.contents6.processManagement",
-                    controller: this
-                }).then(function (oDialog) {
-                    oView_1.addDependent(oDialog);
-                    return oDialog;
-                });
-            }
+        //     if(!this.pDialog) {
+        //         this.pDialog = Fragment.load({
+        //             id: oView_1.getId(),
+        //             name: "OpenUI5.view.contents6.processManagement",
+        //             controller: this
+        //         }).then(function (oDialog) {
+        //             oView_1.addDependent(oDialog);
+        //             return oDialog;
+        //         });
+        //     }
 
-            this.pDialog.then(function(oDialog) {
-                oDialog.open();
-            });
-        },
+        //     this.pDialog.then(function(oDialog) {
+        //         oDialog.open();
+        //     });
+        // },
 
-        onCloseManagementDialog : function () {
-            this.byId("managementDialog").close();
-        },
-
-        onSaveManagementDialog : function () {
-            alert("저장되었습니다.")
-            this.byId("managementDialog").close();
-        }
     });
 });
