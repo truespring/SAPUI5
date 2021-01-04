@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "./controller/contents6/ProcessDialog"
-], function (UIComponent, ProcessDialog) {
+    "./controller/contents6/ProcessDialog",
+    "./controller/contents6/ManagementDialog"
+], function (UIComponent, ProcessDialog, ManagementDialog) {
     "use strict";
 
     return UIComponent.extend("OpenUI5.Component", {
@@ -22,23 +23,24 @@ sap.ui.define([
             
             // set dialog
             this._processDialog = new ProcessDialog(this.getRootControl());
+            this._managementDialog = new ManagementDialog(this.getRootControl());
 		},
 
 
 		exit : function() {
-			this._processDialog.destroy();
+            this._processDialog.destroy();
             delete this._processDialog;
+
+            this._managementDialog.destroy();
+            delete this._managementDialog;
 		},
 
-		// openProcessDialog : function (path) {
-		// 	this._processDialog.open(path);
-        // }
-        
-        openProcessDialog : function () {
-            this._processDialog.openProcess()
+		openProcessDialog : function () {
+			this._processDialog.openProcess();
         },
-        openProcessManagement : function () {
-            this._processDialog.openManagement()
+        
+        openManagementDialog : function () {
+            this._managementDialog.openManagement()
         }
     });
 });

@@ -85,7 +85,7 @@
             <Button
                 id="processDialogButton"
                 text="공정 설정/추가"
-                press=".onOpenProcess"/>
+                press=".onOpenProcessDialog"/>
         </Panel>
     </Page>
 </mvc:View>

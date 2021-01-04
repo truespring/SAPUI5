@@ -15,18 +15,18 @@ sap.ui.define([
 
         },
 
-        onOpenProcess : function () {
+        // onOpenProcess : function () {
+        //     this.getOwnerComponent().openProcessDialog();
+        // },
+        // onOpenProcessManagement : function () {
+        //     this.getOwnerComponent().openProcessManagement();
+        // }
+        onOpenProcessDialog : function() {
             this.getOwnerComponent().openProcessDialog();
         },
-        onOpenProcessManagement : function () {
-            this.getOwnerComponent().openProcessManagement();
-        }
-        // onOpenProcessDialog : function() {
-        //     this.getOwnerComponent().openProcessDialog("processDialog");
-        // },
-        // onOpenProcessManagement : function() {
-        //     this.getOwnerComponent().openProcessDialog("processManagement");
-        // },
+        onOpenProcessManagement : function() {
+            this.getOwnerComponent().openManagementDialog();
+        },
 
         // 디테일 화면
         // _onObjectMatched: function (oEvent) {
