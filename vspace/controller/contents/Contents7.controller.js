@@ -29,6 +29,9 @@ sap.ui.define([
             var oList = this.byId("performance_management");
             var oBinding = oList.getBinding("items");
             oBinding.filter(aFilter);
-        }
+		},
+		onOpenPerformance : function () {
+				this.getOwnerComponent().openPerformanceDialog();
+		}
 	});
 }, true);

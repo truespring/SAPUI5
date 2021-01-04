@@ -100,7 +100,7 @@
                 <items>
                     <ColumnListItem
 					    type="Navigation"
-                        press="">
+                        press=".onOpenPerformance">
                         <cells>
                             <ObjectNumber
                                 number="{

@@ -1,8 +1,9 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "./controller/contents6/ProcessDialog",
-    "./controller/contents6/ManagementDialog"
-], function (UIComponent, ProcessDialog, ManagementDialog) {
+    "./controller/contents6/ManagementDialog",
+    "./controller/contents7/PerformanceDialog"
+], function (UIComponent, ProcessDialog, ManagementDialog, PerformanceDialog) {
     "use strict";
 
     return UIComponent.extend("OpenUI5.Component", {
@@ -24,6 +25,7 @@ sap.ui.define([
             // set dialog
             this._processDialog = new ProcessDialog(this.getRootControl());
             this._managementDialog = new ManagementDialog(this.getRootControl());
+            this._performaneceDialog = new PerformanceDialog(this.getRootControl());
 		},
 
 
@@ -33,6 +35,9 @@ sap.ui.define([
 
             this._managementDialog.destroy();
             delete this._managementDialog;
+
+            this._performaneceDialog.destroy();
+            delete this._performaneceDialog;
 		},
 
 		openProcessDialog : function () {
@@ -40,7 +45,11 @@ sap.ui.define([
         },
         
         openManagementDialog : function () {
-            this._managementDialog.openManagement()
+            this._managementDialog.openManagement();
+        },
+
+        openPerformanceDialog : function () {
+            this._performaneceDialog.openPerformance();
         }
     });
 });
