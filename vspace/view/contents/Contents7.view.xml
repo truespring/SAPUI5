@@ -7,30 +7,119 @@
 
 	<Text text="실적관리" class="page-title title-font-style"/>
 	<Panel accessibleRole="Region">
-    <HBox>
-    <VBox
-        width="20%"
-        class="sapUiSmallMarginEnd">
-		<Text text="검색 기준일"/>
-		<Input type="Date"/>
-    </VBox>
-    <VBox>
-		<Text text="리스트 보기"/>
-		<l:VerticalLayout
-                class=""
-                width="100%">
+        <HBox>
+            <VBox
+                width="20%"
+                class="sapUiSmallMarginEnd">
+                <Text text="검색 기준일"/>
+                <DateRangeSelection
+                    id="calendar"
+                    displayFormat="yyyy/MM/dd"
+                    change="handleChange"/>
+                <Label labelFor="calendar"/>
+            </VBox>
+            <VBox>
+                <Text text="리스트 보기"/>
+                <l:VerticalLayout
+                    class="">
+                    <ActionSelect
+                        id="select"
+                        items="{
+                            path: '/List',
+                            sorter: { path: 'Name' }
+                        }">
+                        <items>
+                            <core:Item key="{Name}" text="{Name}" />
+                        </items>
+                    </ActionSelect>
+                </l:VerticalLayout>
+            </VBox>
+        </HBox>
+        <VBox>
+        <HBox>
+            <Text text="Show"/>
+            <l:VerticalLayout
+                class="">
                 <ActionSelect
-                    id="select"
+                    id="show"
                     items="{
-                        path: '/List',
-                        sorter: { path: 'Name' }
+                        path: '/Show',
+                        sorter: { path: 'show' }
                     }">
                     <items>
-                        <core:Item key="{Name}" text="{Name}" />
+                        <core:Item key="{Number}" text="{Number}" />
                     </items>
                 </ActionSelect>
             </l:VerticalLayout>
-    </VBox>
-    </HBox>
+            <Text text="entries"/>
+        </HBox>
+        <Toolbar>
+            <ToolbarSpacer/>
+            <Text text="Search:"/>
+            <SearchField
+                width="30%"
+                search=".onFilterInvoices"
+                ariaLabelledBy="searchFieldLabel"
+                ariaDescribedBy="searchFieldDescription"
+                placeholder="검색"/>
+        </Toolbar>
+        <Table
+                id="performance_management"
+                class=""
+                width="auto"
+                items="{
+                    path : 'invoice>/Performance_Management'
+                }">
+                <columns
+                    class="HBox-rows">
+                    <Column>
+                        <Text text="{i18n>columnNumber}"/>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>columnOrder}"/>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>columnSupplier}"/>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>columnName}"/>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>columnSize}"/>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>processName}"/>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>columnMechine}"/>
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>worker}"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem
+					    type="Navigation"
+                        press="">
+                        <cells>
+                            <ObjectNumber
+                                number="{
+                                    parts: [{path: 'invoice>Number'}],
+                                    formatOptions: {
+                                        showMeasure: true
+                                    }
+                                }"/>
+                            <Text text="{invoice>OrderNo}"/>
+                            <Text text="{invoice>Supplier}"/>
+                            <Text text="{invoice>Name}"/>
+                            <Text text="{invoice>Size}"/>
+                            <Text text="{invoice>Process}"/>
+                            <Text text="{invoice>Mechine}"/>
+                            <Text text="{invoice>worker}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </VBox>
 	</Panel>
 </mvc:View>
