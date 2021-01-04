@@ -42,10 +42,11 @@
 			<tnt:NavigationListItem text="생산관리" icon="sap-icon://building" expanded="false">
 				<tnt:NavigationListItem text="생산관리계획" select=".onNavToContent5"/>
 				<tnt:NavigationListItem text="공정관리계획" select=".onNavToContent6"/>
+				<tnt:NavigationListItem text="실적관리" select=".onNavToContent7"/>
+				<tnt:NavigationListItem text="설비관리" select=".onNavToContent8"/>
+				<tnt:NavigationListItem text="외주관리" select=".onNavToContent9"/>
 			</tnt:NavigationListItem>
             <tnt:NavigationListItem text="카피" icon="sap-icon://card" expanded="false">
-				<tnt:NavigationListItem text="contents7" select=".onNavToContent7"/>
-				<tnt:NavigationListItem text="contents8" select=".onNavToContent8"/>
             </tnt:NavigationListItem>
 		</tnt:NavigationList>
     </tnt:SideNavigation>

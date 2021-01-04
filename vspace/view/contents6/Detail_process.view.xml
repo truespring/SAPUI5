@@ -62,13 +62,12 @@
                                 class=""
                                 width="100%">
                                 <ActionSelect
-                                    id="sel_out"
+                                    id="select"
                                     items="{
                                         path: '/Outsourcing',
                                         sorter: { path: 'Name' }
                                     }">
-                                    <items
-                                    templateShareable="true">
+                                    <items>
                                         <core:Item key="{Name}" text="{Name}" />
                                     </items>
                                 </ActionSelect>
@@ -86,7 +85,7 @@
             <Button
                 id="processDialogButton"
                 text="공정 설정/추가"
-                press=".onOpenProcessDialog"/>
+                press=".onOpenProcess"/>
         </Panel>
     </Page>
 </mvc:View>

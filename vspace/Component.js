@@ -19,16 +19,26 @@ sap.ui.define([
             // create the views based on the url/hash
             var oRouter = this.getRouter();
             oRouter.initialize();
-
+            
             // set dialog
-			this._processDialog = new ProcessDialog(this.getRootControl());
-        },
-        exit : function () {
-            this._processDialog.destory();
+            this._processDialog = new ProcessDialog(this.getRootControl());
+		},
+
+
+		exit : function() {
+			this._processDialog.destroy();
             delete this._processDialog;
+		},
+
+		// openProcessDialog : function (path) {
+		// 	this._processDialog.open(path);
+        // }
+        
+        openProcessDialog : function () {
+            this._processDialog.openProcess()
         },
-        openProcessDialog : function (path) {
-            this._processDialog.open(path);
+        openProcessManagement : function () {
+            this._processDialog.openManagement()
         }
     });
 });

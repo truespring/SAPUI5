@@ -1,8 +1,8 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
-	"sap/ui/core/Fragment"
-], function (Controller, JSONModel, Fragment) {
+    "sap/ui/core/UIComponent"
+], function (Controller, JSONModel, UIComponent) {
     "use strict";
     return Controller.extend("sap.ui.deme.walkthrough.controller.Detail_process", {
         onInit: function () {            
@@ -14,12 +14,19 @@ sap.ui.define([
 			this.getView().setModel(oModel);
 
         },
-        onOpenProcessDialog : function() {
-            this.getOwnerComponent().openProcessDialog("processDialog");
+
+        onOpenProcess : function () {
+            this.getOwnerComponent().openProcessDialog();
         },
-        onOpenProcessManagement : function() {
-            this.getOwnerComponent().openProcessDialog("processManagement");
-        },
+        onOpenProcessManagement : function () {
+            this.getOwnerComponent().openProcessManagement();
+        }
+        // onOpenProcessDialog : function() {
+        //     this.getOwnerComponent().openProcessDialog("processDialog");
+        // },
+        // onOpenProcessManagement : function() {
+        //     this.getOwnerComponent().openProcessDialog("processManagement");
+        // },
 
         // 디테일 화면
         // _onObjectMatched: function (oEvent) {

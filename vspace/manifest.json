@@ -61,6 +61,7 @@
 			           { "name": "contents5",       "pattern": "contents5",         "target": "contents5"},
 			           { "name": "contents7",       "pattern": "contents7",         "target": "contents7"},
 					   { "name": "contents8",       "pattern": "contents8",         "target": "contents8"},
+					   { "name": "contents9",       "pattern": "contents9",         "target": "contents9"},
 					   { "name": "detail_product",	"pattern": "detail_product/{invoicePath}","target": "detail_product" },
 					   { "name": "detail_process",	"pattern": "detail_process/{invoicePath}","target": "detail_process" }
 			          ],
@@ -112,6 +113,12 @@
                     "viewName": "Contents8",
                     "viewLevel": 1,
                     "viewId": "contents8"
+				},
+                "contents9": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents9",
+                    "viewLevel": 1,
+                    "viewId": "contents9"
 				},
 				"detail_product": {
 					"viewPath": "OpenUI5.view.contents5",

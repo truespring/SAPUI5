@@ -1,10 +1,9 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/routing/History",
-    "sap/m/MessageToast",
     "sap/ui/model/json/JSONModel",
     "sap/ui/core/UIComponent"
-], function (Controller, History, MessageToast, JSONModel, UIComponent) {
+], function (Controller, History, JSONModel, UIComponent) {
     "use strict";
     return Controller.extend("sap.ui.deme.walkthrough.controller.Detail_product", {
         onInit: function () {            

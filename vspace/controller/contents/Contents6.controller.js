@@ -1,6 +1,8 @@
 sap.ui.define([
-    "OpenUI5/controller/common/BaseController"
-], function(BaseController) {
+    "OpenUI5/controller/common/BaseController",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator"
+], function(BaseController, Filter, FilterOperator) {
 	"use strict";
 		
 	return BaseController.extend("OpenUI5.controller.common.BaseController", {
