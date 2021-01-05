@@ -62,6 +62,20 @@ sap.ui.define([
 
 			var oRouter = this.getRouter();
 		    oRouter.navTo("contents8");
+		},
+		
+		onNavToContent9 : function(oEvent) {
+			console.log("Left.js onNavToContent9 Clicked");
+
+			var oRouter = this.getRouter();
+		    oRouter.navTo("contents9");
+		},
+		
+		onNavToContent10 : function(oEvent) {
+			console.log("Left.js onNavToContent10 Clicked");
+
+			var oRouter = this.getRouter();
+		    oRouter.navTo("contents10");
 		}
 	});
 }, true);

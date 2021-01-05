@@ -62,6 +62,7 @@
 			           { "name": "contents7",       "pattern": "contents7",         "target": "contents7"},
 					   { "name": "contents8",       "pattern": "contents8",         "target": "contents8"},
 					   { "name": "contents9",       "pattern": "contents9",         "target": "contents9"},
+					   { "name": "contents10",       "pattern": "contents10",		"target": "contents10"},
 					   { "name": "detail_product",	"pattern": "detail_product/{invoicePath}","target": "detail_product" },
 					   { "name": "detail_process",	"pattern": "detail_process/{invoicePath}","target": "detail_process" },
 					   { "name": "detail_history",	"pattern": "detail_history/{invoicePath}","target": "detail_history" }
@@ -120,6 +121,12 @@
                     "viewName": "Contents9",
                     "viewLevel": 1,
                     "viewId": "contents9"
+				},
+                "contents10": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents10",
+                    "viewLevel": 1,
+                    "viewId": "contents10"
 				},
 				"detail_product": {
 					"viewPath": "OpenUI5.view.contents5",
