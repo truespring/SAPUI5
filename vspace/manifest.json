@@ -63,8 +63,9 @@
 					   { "name": "contents8",       "pattern": "contents8",         "target": "contents8"},
 					   { "name": "contents9",       "pattern": "contents9",         "target": "contents9"},
 					   { "name": "detail_product",	"pattern": "detail_product/{invoicePath}","target": "detail_product" },
-					   { "name": "detail_process",	"pattern": "detail_process/{invoicePath}","target": "detail_process" }
-			          ],
+					   { "name": "detail_process",	"pattern": "detail_process/{invoicePath}","target": "detail_process" },
+					   { "name": "detail_history",	"pattern": "detail_history/{invoicePath}","target": "detail_history" }
+					],
 			"targets": {
 				"contents1": {
 					"viewPath": "OpenUI5.view.contents",
@@ -123,14 +124,20 @@
 				"detail_product": {
 					"viewPath": "OpenUI5.view.contents5",
 					"viewName": "Detail_product",
-					"viewLevel": 2,
+					"viewLevel": 1,
 					"viewId": "detail_product"
 				},
 				"detail_process": {
 					"viewPath": "OpenUI5.view.contents6",
 					"viewName": "Detail_process",
-					"viewLevel": 2,
+					"viewLevel": 1,
 					"viewId": "detail_process"
+				},
+				"detail_history": {
+					"viewPath": "OpenUI5.view.contents8",
+					"viewName": "Detail_history",
+					"viewLevel": 1,
+					"viewId": "detail_history"
 				}
 			}
 		}

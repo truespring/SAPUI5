@@ -1,7 +1,6 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
-], function (Controller, JSONModel) {
+    "sap/ui/core/mvc/Controller"
+], function (Controller) {
     "use strict";
 
     return Controller.extend("OpenUI5.controller.History", {
@@ -14,6 +13,13 @@ sap.ui.define([
         },
         onOpenManagementDialog : function () {
             this.getOwnerComponent().openInspectionManagementDialog();
+        },
+        onPress: function (oEvent) {
+            var oItem = oEvent.getSource();
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("detail_history", {
+                invoicePath: window.encodeURIComponent(oItem.getBindingContext("invoice").getPath().substr(1))
+            });
         }
     });
 });

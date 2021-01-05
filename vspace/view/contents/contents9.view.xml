@@ -4,6 +4,12 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:l="sap.ui.layout"
 	controllerName="OpenUI5.controller.contents.Contents9">
-
-	<Text text="Contents9"/>
+	<items>
+		<IconTabFilter text="막대와 원 차트" key="info">
+			<mvc:XMLView id="historyView" viewName="OpenUI5.view.contents9.History"/>
+		</IconTabFilter>
+		<IconTabFilter text="설비별 정기 점검현황" key="attachments">
+			<mvc:XMLView id="inspectionView" viewName="OpenUI5.view.contents8.Inspection"/>
+		</IconTabFilter>
+	</items>
 </mvc:View>

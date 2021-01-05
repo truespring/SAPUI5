@@ -20,9 +20,9 @@
             </VBox>
             <VBox>
                 <HBox>
-                    <Text text="설비 구분"/>
+                    <Text text="설비 구분" class="left-margin"/>
                     <l:VerticalLayout
-                        class=""
+                        class="left-margin"
                         width="100%">
                         <ActionSelect
                             id="select"
@@ -37,19 +37,21 @@
                     </l:VerticalLayout>
                 </HBox>
                 <HBox>
-                    <Text text="설비명"/>
-                    <Input type="Text" placeholder="*설비명"/>
-                    <Input type="Text" placeholder="설비코드 (선택입력)"/>
+                    <Text text="설비명" class="left-margin"/>
+                    <Input type="Text" placeholder="*설비명" class="left-margin"/>
+                    <Input type="Text" placeholder="설비코드 (선택입력)" class="left-margin"/>
                 </HBox>
                 <HBox>
-                    <Text text="제조사"/>
-                    <Input type="Text" placeholder="제조사"/>
+                    <Text text="제조사" class="left-margin"/>
+                    <Input type="Text" placeholder="제조사" class="left-margin"/>
                 </HBox>
             </VBox>
             <Button
+                class="left-margin"
                 text="설비 등록"
                 press=""/>
-            <Table>
+            <Table
+                class="left-margin">
                 <columns>
                     <Column>
                         <Text text="설비 구분"/>
