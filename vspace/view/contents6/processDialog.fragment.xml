@@ -3,7 +3,7 @@
     xmlns:core="sap.ui.core">
     <Dialog
         id="processDialog"
-        title="{i18n>processDialogTitle}">
+        title="공정 설정/추가">
         <Table>
             <columns>
                 <Column>
@@ -96,7 +96,7 @@
                                                 }"/>
                                         <Text text="{invoice>Name}"/>
                                         <HBox>
-                                            <Switch state="true" customTextOn="진행" customTextOff="No">
+                                            <Switch state="true" customTextOn="진행" customTextOff="취소">
                                                 <layoutData>
                                                     <FlexItemData growFactor="1" />
                                                 </layoutData>

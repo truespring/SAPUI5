@@ -1,7 +1,7 @@
 <mvc:View
-    controllerName="OpenUI5.controller.contents8.History"
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
+    xmlns:mvc="sap.ui.core.mvc"
+	controllerName="OpenUI5.controller.contents8.History">
 	<Text text="검색 기준일"/>
 	<Panel accessibleRole="Region">
 		<DateRangeSelection
@@ -14,7 +14,7 @@
 			class="sapUiResponsiveMargin"
 			width="auto"
 			items="{
-				path : 'invoice>/'
+				path : 'invoice>/Mechine_Maintenance'
 			}">
 			<columns>
 				<Column
@@ -68,22 +68,22 @@
 									showMeasure: true
 								}
 							}"/>
-						<Text text="{invoice>}"/>
-						<Text text="{invoice>}"/>
-						<Text text="{invoice>}"/>
-						<Text text="{invoice>}"/>
-						<Text text="{invoice>}"/>
-						<Text text="{invoice>}"/>
+						<Text text="{invoice>Day}"/>
+						<Text text="{invoice>MechineDivide}"/>
+						<Text text="{invoice>MechineName}"/>
+						<Text text="{invoice>Provision}"/>
+						<Text text="{invoice>Day}"/>
+						<Text text="{invoice>Worker}"/>
 					</cells>
 				</ColumnListItem>
 			</items>
 		</Table>
         <Button
             text="설비 관리"
-            press=""/>
+            press=".onOpenHistoryDialog"/>
         <Button
             text="정기 점검 관리"
-            press=""/>
+            press=".onOpenManagementDialog"/>
         <Button
             text="설비 이력 작성"
             press=""/>

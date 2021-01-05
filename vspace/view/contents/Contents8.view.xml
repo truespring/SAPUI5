@@ -11,10 +11,10 @@
 		class="sapUiResponsiveContentPadding">
 		<items>
 			<IconTabFilter text="설비 이력" key="info">
-    			<mvc:XMLView id="registerView" viewName="OpenUI5.view.contents8.History"/>
+    			<mvc:XMLView id="historyView" viewName="OpenUI5.view.contents8.History"/>
 			</IconTabFilter>
 			<IconTabFilter text="설비별 정기 점검현황" key="attachments">
-    			<mvc:XMLView id="weeklyView" viewName="OpenUI5.view.contents8.Inspection"/>
+    			<mvc:XMLView id="inspectionView" viewName="OpenUI5.view.contents8.Inspection"/>
 			</IconTabFilter>
 		</items>
 	</IconTabBar>

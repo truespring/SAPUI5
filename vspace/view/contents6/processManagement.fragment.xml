@@ -3,7 +3,7 @@
     xmlns:core="sap.ui.core">
     <Dialog
         id="managementDialog"
-        title="{}">
+        title="공정 관리">
         <Text text="공정 관리"/>
         <Input
             type="Text"

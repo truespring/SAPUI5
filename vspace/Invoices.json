@@ -338,5 +338,15 @@
 			"Mechine": "스팟기",
 			"worker": "김재헌"
 		}
+	],
+	"Mechine_Maintenance": [
+		{
+			"Number": 1,
+			"Day": "2020-07-27",
+			"MechineDivide": "점검",
+			"MechineName": "스팟기",
+			"Provision": "점검",
+			"Worker": "김재현"
+		}
 	]
 }

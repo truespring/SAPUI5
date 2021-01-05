@@ -3,7 +3,7 @@
     xmlns:core="sap.ui.core">
     <Dialog
         id="performanceDialog"
-        title="{}">
+        title="실적등록">
         <content>
             <VBox
                 class="Fragment-padding">

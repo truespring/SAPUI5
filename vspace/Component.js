@@ -1,9 +1,12 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
+    "sap/ui/model/json/JSONModel",
     "./controller/contents6/ProcessDialog",
     "./controller/contents6/ManagementDialog",
-    "./controller/contents7/PerformanceDialog"
-], function (UIComponent, ProcessDialog, ManagementDialog, PerformanceDialog) {
+    "./controller/contents7/PerformanceDialog",
+    "./controller/contents8/HistoryDialog",
+    "./controller/contents8/InspectionManagementDialog"
+], function (UIComponent, JSONModel, ProcessDialog, ManagementDialog, PerformanceDialog, HistoryDialog, InspectionManagementDialog) {
     "use strict";
 
     return UIComponent.extend("OpenUI5.Component", {
@@ -14,7 +17,15 @@ sap.ui.define([
         
         init: function () {
         	console.log("Component.js init()");
-        	
+            // set data model
+			var oData = {
+                recipient : {
+                    name : "World"
+                }
+            };
+            var oModel = new JSONModel(oData);
+            this.setModel(oModel);
+            
             // call the init function of the parent
             UIComponent.prototype.init.apply(this, arguments);
 
@@ -26,6 +37,8 @@ sap.ui.define([
             this._processDialog = new ProcessDialog(this.getRootControl());
             this._managementDialog = new ManagementDialog(this.getRootControl());
             this._performaneceDialog = new PerformanceDialog(this.getRootControl());
+            this._historyDialog = new HistoryDialog(this.getRootControl());
+            this._inspectionManagementDialog = new InspectionManagementDialog(this.getRootControl());
 		},
 
 
@@ -38,6 +51,12 @@ sap.ui.define([
 
             this._performaneceDialog.destroy();
             delete this._performaneceDialog;
+
+            this._historyDialog.destroy();
+            delete this._historyDialog;
+
+            this._inspectionManagementDialog.destroy();
+            delete this._inspectionManagementDialog;
 		},
 
 		openProcessDialog : function () {
@@ -50,6 +69,14 @@ sap.ui.define([
 
         openPerformanceDialog : function () {
             this._performaneceDialog.openPerformance();
+        },
+
+        openHistoryDialog : function () {
+            this._historyDialog.openHistory();
+        },
+
+        openInspectionManagementDialog : function () {
+            this._inspectionManagementDialog.openManagement();
         }
     });
 });
