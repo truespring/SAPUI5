@@ -47,7 +47,7 @@
 			</tnt:NavigationListItem>
             <tnt:NavigationListItem text="없는 기능 구현" icon="sap-icon://card" expanded="false">
 				<tnt:NavigationListItem text="타일" select=".onNavToContent9"/>
-				<tnt:NavigationListItem text="신생" select=".onNavToContent10"/>
+				<tnt:NavigationListItem text="차트" select=".onNavToContent10"/>
             </tnt:NavigationListItem>
 		</tnt:NavigationList>
     </tnt:SideNavigation>
