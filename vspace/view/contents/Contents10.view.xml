@@ -2,4 +2,5 @@
     xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
     <Text text="test"/>
+    <mvc:XMLView id="chartView" viewName="OpenUI5.view.contents10.ChartContainer"/>
 </mvc:View>
