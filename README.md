@@ -4,11 +4,16 @@
  - 해당 사이트 : https://sapui5.hana.ondemand.com/
  - SAP 운영자 사이트 : https://st03k.tistory.com/
  - SAP 개발자 사이트 : https://dhan-description.tistory.com/
+ - 해당 index.html을 실행할 때는 반드시 live server로 실행할 것
+
+## SAPUI5란?
+
+ - SAPUI5란 반응형 웹 애플리케이션을 개발을 위한 프레임워크
 
 ## 목표
 
-* SAPUI5를 이용한 MES개발
-* 해당 Framework의 사용법과 구조 파악
+ * SAPUI5를 이용한 MES개발
+ * 해당 Framework의 사용법과 구조 파악
 
 ### EMS의 목표
 
@@ -23,19 +28,23 @@
 
 ### 기능
 
-* 디버깅 툴
+ * 디버깅 툴
     - crtl + alt + shift + s
 
-* 랜드마크 내비게이션
+ * 랜드마크 내비게이션
     - alt + shift + l
 
-* Dialog
+ * Dialog
     - fragment 하나의 파일 당 js파일이 필요함
 
 ### 사용중인 기능이지만 잘 모르는 것
 
-* mockserver
+ * mockserver
     - 사용하는 이유
+
+### 라이브러리
+ - sap.ui.core -> view
+ - sap.m -> Button, Input, Test
 
 ### 리눅스를 사용한 호스팅
 
