@@ -48,6 +48,10 @@
     - 컨트롤러에서 extend(상속받는 컨트롤러)를 가리킴
     - 이를 통해 상속받아 부모의 함수를 사용할 수 있음
 
+ * BaseController
+    - 중복되는 함수는 BaseController에 구현한 뒤 this.함수명으로 호출하여 사용하면 중복되는 코드를 줄일 수 있음
+    - BaseController의 함수 내에서 더 하위 단계의 함수로 내려가면 var that = this를 하여 담아놓고 사용
+
 ### 라이브러리
  - sap.ui.core -> view
  - sap.m -> Button, Input, Test

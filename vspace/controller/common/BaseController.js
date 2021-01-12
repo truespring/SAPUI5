@@ -2,7 +2,9 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/core/UIComponent",
     "sap/ui/model/json/JSONModel",
-], function (Controller, UIComponent, JSONModel) {
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator"
+], function (Controller, UIComponent, JSONModel, Filter, FilterOperator) {
     "use strict";
     
     return Controller.extend("my.application.controller.BaseController", 
@@ -34,6 +36,20 @@ sap.ui.define([
         getResourceBundle: function ()
         {
             return this.getOwnerComponent().getModel("i18n").getResourceBundle();
+        },
+
+        FilterInvoices : function (oEvent, oId) {
+            // build filter array
+            var aFilter = [];
+            var sQuery = oEvent.getParameter("query");
+            if(sQuery) {
+                aFilter.push(new Filter("Name", FilterOperator.Contains, sQuery));
+            }
+
+            // filter binding
+            var oList = this.byId(oId);
+            var oBinding = oList.getBinding("items");
+            oBinding.filter(aFilter);
         }
     });
 });
