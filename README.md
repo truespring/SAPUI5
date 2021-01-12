@@ -42,6 +42,12 @@
  * mockserver
     - 사용하는 이유
 
+### SAPUI5 알게 된 것
+
+ * this
+    - 컨트롤러에서 extend(상속받는 컨트롤러)를 가리킴
+    - 이를 통해 상속받아 부모의 함수를 사용할 수 있음
+
 ### 라이브러리
  - sap.ui.core -> view
  - sap.m -> Button, Input, Test
