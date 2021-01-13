@@ -52,6 +52,10 @@
     - 중복되는 함수는 BaseController에 구현한 뒤 this.함수명으로 호출하여 사용하면 중복되는 코드를 줄일 수 있음
     - BaseController의 함수 내에서 더 하위 단계의 함수로 내려가면 var that = this를 하여 담아놓고 사용
 
+ * back단과 front단
+    - back단의 경로와 front단의 경로는 따로 존재하며, front단의 경우 수정한 뒤 새로고침으로 확인 가능
+    - java단에서 뷰로 연결하고 뷰에서 연결된 경로를 통해 화면에 뿌려줌
+
 ### 라이브러리
  - sap.ui.core -> view
  - sap.m -> Button, Input, Test
