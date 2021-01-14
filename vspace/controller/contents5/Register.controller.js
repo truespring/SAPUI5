@@ -1,11 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    "OpenUI5/controller/common/BaseController",
     "sap/ui/model/Filter",
     "sap/ui/model/FilterOperator"
 ], function (Controller, Filter, FilterOperator) {
     "use strict";
 
-    return Controller.extend("OpenUI5.controller.Register", {
+    return Controller.extend("OpenUI5.contents.controller.Contents5", {
         onInit : function () {
             
         },
@@ -26,6 +26,8 @@ sap.ui.define([
         onPress: function (oEvent) {
             var oItem = oEvent.getSource();
             var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            console.log(this.getModel("invoice"))
+            console.log(window.encodeURIComponent(oItem.getBindingContext("invoice").getPath().substr(1)))
             oRouter.navTo("detail_product", {
                 invoicePath: window.encodeURIComponent(oItem.getBindingContext("invoice").getPath().substr(1))
             });
