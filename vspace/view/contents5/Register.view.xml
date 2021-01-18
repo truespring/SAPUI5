@@ -1,7 +1,7 @@
 <mvc:View
-		controllerName="OpenUI5.controller.contents5.Register"
-		xmlns="sap.m"
-		xmlns:mvc="sap.ui.core.mvc">
+	controllerName="OpenUI5.controller.contents5.Register"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
 	<Text text="검색 기준일"/>
 	<Panel accessibleRole="Region">
 		<headerToolbar>
@@ -95,5 +95,8 @@
 				</ColumnListItem>
 			</items>
 		</Table>
+		<Button
+			text="등록"
+			press=".onRegister"/>
 	</Panel>
 </mvc:View>
