@@ -37,6 +37,10 @@ sap.ui.define([
         {
             return this.getOwnerComponent().getModel("i18n").getResourceBundle();
         },
+        getViewIdValue : function (sName)
+        {
+            return this.getView().byId(sName).getValue();
+        },
 
         FilterInvoices : function (oEvent, oId) {
             // build filter array

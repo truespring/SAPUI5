@@ -1,0 +1,70 @@
+<mvc:View 	
+	xmlns="sap.m" 
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	controllerName="OpenUI5.controller.contents.Contents2">
+
+	<Text text="거래처관리" class="title-font-style page-title"/>
+	<Panel accessibleRole="Region">
+		<VBox>
+			<Text text="거래처 등록" class="panel-title"/>
+			<Text text='신규 거래처 등록은 "신규"버튼을 이용해주시고 수정시에는 원하는 리스트에서 크릭하시면 수정이 가능합니다. (수정 권한이 없을 경우 사용할 수 없음)' class="info-text"/>
+		</VBox>
+		<HBox class="top-margin">
+			<Text text="show" class="left20"/>
+			<l:VerticalLayout
+                class="">
+                <ActionSelect
+                    id="show"
+                    items="{
+                        path: '/Show',
+                        sorter: { path: 'show' }
+                    }">
+                    <items>
+                        <core:Item key="{Number}" text="{Number}" />
+                    </items>
+                </ActionSelect>
+            </l:VerticalLayout>
+			<Text text="entries"/>
+			<Toolbar class="left700">
+				<ToolbarSpacer/>
+				<Text text="Search:" width="50px"/>
+				<SearchField
+					search="."
+					ariaLabelledBy="searchFieldLabel"
+					ariaDescribedBy="searchFieldDescription"
+					placeholder="검색"/>
+			</Toolbar>
+		</HBox>
+		<Table
+			id=""
+			class=""
+			width="auto"
+			items="{
+				path : 'invoice>/'
+			}">
+			<columns
+				class="HBox-rows">
+				<Column>
+					<Text text="1"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem
+					type="Navigation"
+					press=".">
+					<cells>
+						<Text text=""/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+		<Button
+			text="업체분류 관리"
+			press=""/>
+		<Button
+			text="거래처 등록"
+			press=""/>
+	</Panel>
+</mvc:View>

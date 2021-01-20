@@ -1,0 +1,21 @@
+
+/* FONT */
+@font-face {font-family: 'GmarketSansMedium';src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');font-weight: normal;font-style: normal;}
+/* FONT END */
+
+/* STYLE SETTING */
+.main-back {		background-color:#263238DE;	}
+.title-font-style {	font-weight: bold;	font-size: 1.4rem;	font-family: 'GmarketSansMedium', serif;}
+.main-title {		margin-top: 8px;	margin-left: 40px;	color: white;}
+.page-title	{		margin-top: 10px;	margin-left: 20px;}
+.panel-title{       font-weight: bold;  margin-left: 20px;  margin-bottom: 10px; font-size: 1.2em;}
+.info-text  {       margin-left: 20px;}
+.HBox-rows {		height: 50px;		position: relative; align-items: center; margin-left: 30px;}
+.rows-width {		width: 60px}
+.Fragment-padding {	padding: 20px;}
+.left-padding {		padding-left: 20px;}
+.bottom-padding {	padding-bottom: 20px;}
+.top-padding {		padding-top: 20px;}
+.top-margin {       margin-top: 20px;}
+.left700 {          margin-left: 700px;}
+.left20{            margin-left: 20px;}

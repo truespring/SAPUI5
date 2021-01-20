@@ -1,0 +1,168 @@
+{
+	"_version": "1.21.0",
+    "sap.app": {
+		"id": "openUI5",
+        "applicationVersion": {
+        	"version": "1.0.0"
+        },
+        "i18n": "i18n/i18n.properties"
+    },
+    "sap.ui5": {
+		"rootView": {
+			"viewName": "OpenUI5.view.frame.Layout",
+			"type": "XML",
+			"async": true
+		},
+        "dependencies": {
+        	"libs": {
+        		"sap.ui.layout": {},
+				"sap.m": {},
+				"sap.ui.table": {}
+            }
+        }, 
+        "resources": {
+        	"css" : [{ "uri": "css/style.css", "id": "css" }]
+        },
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"manifest.json"
+				]
+			}
+		},
+        "models": {
+        	"i18n": {
+        		"type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+				"bundleName": "OpenUI5.i18n.i18n"
+				}
+			}
+        },
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"controlId": "centerView",
+				"controlAggregation": "pages",
+				"transition": "show",
+				"async": true
+			},
+			"routes": [{ "name": "contents0",       "pattern": ""         ,         "target": "contents0"},
+			           { "name": "contents1",       "pattern": "contents1",         "target": "contents1"},
+			           { "name": "contents2",       "pattern": "contents2",         "target": "contents2"},
+			           { "name": "contents3",       "pattern": "contents3",         "target": "contents3"},
+			           { "name": "contents4",       "pattern": "contents4",         "target": "contents4"},
+			           { "name": "contents6",       "pattern": "contents6",         "target": "contents6"},
+			           { "name": "contents5",       "pattern": "contents5",         "target": "contents5"},
+			           { "name": "contents7",       "pattern": "contents7",         "target": "contents7"},
+					   { "name": "contents8",       "pattern": "contents8",         "target": "contents8"},
+					   { "name": "contents9",       "pattern": "contents9",         "target": "contents9"},
+					   { "name": "contents10",       "pattern": "contents10",		"target": "contents10"},
+					   { "name": "contents11",       "pattern": "contents11",		"target": "contents11"},
+					   { "name": "register_product",	"pattern": "register_product","target": "register_product" },
+					   { "name": "detail_product",	"pattern": "detail_product/{invoicePath}","target": "detail_product" },
+					   { "name": "detail_process",	"pattern": "detail_process/{invoicePath}","target": "detail_process" },
+					   { "name": "detail_history",	"pattern": "detail_history/{invoicePath}","target": "detail_history" }
+					],
+			"targets": {
+				"contents0": {
+					"viewPath": "OpenUI5.view.contents",
+					"viewName": "Contents0",
+					"viewLevel": 1,
+					"viewId": "contents0"
+				},
+				"contents1": {
+					"viewPath": "OpenUI5.view.contents",
+					"viewName": "Contents1",
+					"viewLevel": 1,
+					"viewId": "contents1"
+				},
+				"contents2": {
+					"viewPath": "OpenUI5.view.contents",
+					"viewName": "Contents2",
+					"viewLevel": 1,
+					"viewId": "contents2"
+				},
+                "contents3": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents3",
+                    "viewLevel": 1,
+                    "viewId": "contents3"
+                },
+                "contents4": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents4",
+                    "viewLevel": 1,
+                    "viewId": "contents4"
+                },
+                "contents5": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents5",
+                    "viewLevel": 1,
+                    "viewId": "contents5"
+                },
+                "contents6": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents6",
+                    "viewLevel": 1,
+                    "viewId": "contents6"
+                },
+                "contents7": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents7",
+                    "viewLevel": 1,
+                    "viewId": "contents7"
+                },
+                "contents8": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents8",
+                    "viewLevel": 1,
+                    "viewId": "contents8"
+				},
+                "contents9": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents9",
+                    "viewLevel": 1,
+                    "viewId": "contents9"
+				},
+                "contents10": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents10",
+                    "viewLevel": 1,
+                    "viewId": "contents10"
+				},
+                "contents11": {
+                    "viewPath": "OpenUI5.view.contents",
+                    "viewName": "Contents11",
+                    "viewLevel": 1,
+                    "viewId": "contents11"
+				},
+				"register_product": {
+					"viewPath": "OpenUI5.view.contents5",
+					"viewName": "Register_product",
+					"viewLevel": 1,
+					"viewId": "register_product"
+				},
+				"detail_product": {
+					"viewPath": "OpenUI5.view.contents5",
+					"viewName": "Detail_product",
+					"viewLevel": 1,
+					"viewId": "detail_product"
+				},
+				"detail_process": {
+					"viewPath": "OpenUI5.view.contents6",
+					"viewName": "Detail_process",
+					"viewLevel": 1,
+					"viewId": "detail_process"
+				},
+				"detail_history": {
+					"viewPath": "OpenUI5.view.contents8",
+					"viewName": "Detail_history",
+					"viewLevel": 1,
+					"viewId": "detail_history"
+				}
+			}
+		}
+    }
+}

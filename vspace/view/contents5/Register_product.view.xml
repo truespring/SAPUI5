@@ -17,7 +17,7 @@
         </HBox>
         <HBox class="HBox-rows">
             <Text text="{i18n>columnDeadline}" class="sapUiSmallMarginEnd rows-width"/>
-            <Input id="deadline"/>
+            <Input id="deadline" type="Date"/>
         </HBox>
         <HBox class="HBox-rows">
             <Text text="{i18n>columnName}" class="sapUiSmallMarginEnd rows-width"/>
@@ -39,9 +39,9 @@
         <HBox class="HBox-rows">
         <!-- 계획 기간 -->
             <Text text="{i18n>planningPeriod}" class="sapUiSmallMarginEnd rows-width"/>
-            <Input type="Date" id="start_day"/>
+            <Input type="Date" id="start_date"/>
             <Text text="~"/>
-            <Input type="Date" id="end_day"/>
+            <Input type="Date" id="end_date"/>
         </HBox>
         <HBox class="HBox-rows">
         <!-- 원자재 -->
@@ -64,7 +64,7 @@
         <HBox class="HBox-rows">
         <!-- 소요량 -->
             <Text text="{i18n>columnAmount}" class="sapUiSmallMarginEnd rows-width"/>
-            <Input type="Number" value="0" placeholder="소요량" width="30em" id="requried_quantity"/>
+            <Input type="Number" width="30em" id="required_quantity"/>
         </HBox>
         <HBox class="HBox-rows">
         <!-- 외주 여부 -->
