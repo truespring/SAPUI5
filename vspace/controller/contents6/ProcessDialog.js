@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/ui/base/ManagedObject",
-	"sap/ui/core/Fragment"
-], function (ManagedObject, Fragment) {
+	"sap/ui/core/Fragment",
+    "sap/ui/model/Filter"
+], function (ManagedObject, Fragment, Filter) {
 	"use strict";
 
 	return ManagedObject.extend("sap.ui.demo.walkthrough.controller.HelloDialog", {
